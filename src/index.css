@@ -3,6 +3,7 @@
 @import url("./sections/about/index.module.css");
 @import url("./pages/contactPage/index.module.css");
 @import url("./pages/Team/index.module.css");
+@import url("./pages/News/nostopmonth/index.module.css");
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +14,13 @@
   box-sizing: border-box;
   font-family: "geist" sans-serif;
   outline: none;
+}
+
+
+:root {
+  --main: #1b211e;
+  --text-light: rgb(255, 255, 255);
+  --text-dark: #153448;
 }
 
 @font-face {
@@ -32,12 +40,18 @@
 }
 @font-face {
   font-family: "notgeist";
-  src: url("/fonts/Luxurious_Script/LuxuriousScript-Regular.ttf");
-  font-weight: lighter;
+  src: url("/fonts/Oswald/static/Oswald-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "notgeist";
+  src: url("/fonts/Oswald/static/Oswald-Bold.ttf");
+  font-weight: bold;
 }
 
 html {
   max-width: 1500px;
+  min-width: 350px;
   min-height: 500px;
 }
 
@@ -47,6 +61,7 @@ body {
   padding: 0 !important;
   min-width: 320px;
   overflow-x: hidden !important;
+  background-color: #fff !important;
   
 }
 
@@ -71,7 +86,7 @@ body {
 
 .clip_path-container {
   clip-path: inset(30% 30% round 1rem);
-  background-color: #1d1b1c;
+  background-color: var(--main);
 }
 
 
@@ -89,29 +104,7 @@ body {
 }
 
 
-.slide-in {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: "#222";
-  transform-origin: bottom;
-  pointer-events: none;
-  z-index: 2;
-}
 
-.slide-out {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #222;
-  transform-origin: top;
-  pointer-events: none;
-  z-index: 2;
-}
 
 
 @media screen and (max-height: 150px) {
@@ -120,8 +113,6 @@ body {
     display: none;
   }
 }
-
-
 
 
 
@@ -195,3 +186,58 @@ body {
   width: 100%;
   height: 200px;
 }
+
+
+.bg-image {
+  background-image: url("https://images.pexels.com/photos/21412136/pexels-photo-21412136/free-photo-of-klakkur-near-klaksvik-mountainous-island-shot-from-the-ocean-in-the-faroe-islands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  object-fit: cover;
+}
+
+
+
+
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: "#222";
+  transform-origin: bottom;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--main);
+  transform-origin: top;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+
+
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none !important; /* IE and Edge */
+    scrollbar-width: none !important; /* Firefox */
+  }
+}
+
+.clip_path-container {
+  clip-path: inset(30% 30% round 1rem);
+}
+

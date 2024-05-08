@@ -1,5 +1,8 @@
+
+
+
 .about {
-    background: #1b211e;
+    background: var(--main);
     color: #fff;
     min-height: 100vh;
     
@@ -39,16 +42,16 @@
     position: sticky;
     top: 0;
     background: #fff;
-    color: #1b211e;
+    color: var(--main);
     padding: 4em 2em 4em 2em;
   }
-  
+/*   #1b211e */
   .about-sticky-2 {
     width: 100vw;
     height: 100vh;
     position: sticky;
     top: 0;
-    background: #1b211e;
+    background: var(--main);
     padding: 4em 2em 4em 2em;
   }
   
@@ -58,7 +61,7 @@
     position: sticky;
     top: 0;
     background: #fff;
-    color: #1b211e;
+    color: var(--main);
     padding: 4em 2em 4em 2em;
   }
   
@@ -82,7 +85,7 @@
   .more-clients {
     position: relative;
     background: #aeaeae;
-    color: #1b211e;
+    color: var(--main);
     padding-top: 8em;
   }
   
@@ -116,7 +119,7 @@
   .office {
     padding-top: 8em;
     position: relative;
-    background: #1b211e;
+    background: var(--main);
     height: max-content !important;
   }
   

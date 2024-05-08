@@ -5,7 +5,6 @@ import Transition from "../../components/transition/Transition";
 
 import AboutHero from "./media/about-hero.jpg";
 import AboutFeature from "./media/about-feature.jpg";
-import Office from "./media/about-office.jpg";
 import { TextGenerateEffectDemo } from "../../components/spotcomps/textgeneration";
 
 
@@ -21,11 +20,7 @@ const About = () => {
         data-scroll-container
         id="scroll-container"
       >
-        <section className="hero-img" data-scroll-section>
-          <div className="hero-img-container  m-auto pt-10">
-            <img loading="lazy" className="rounded-2xl md:w-[50rem] w-[90%] m-auto" src={AboutHero} alt="" />
-          </div>
-        </section>
+        
 
         <section className="about-us " data-scroll-section>
           <div className="about-us-copy ">
@@ -44,6 +39,14 @@ const About = () => {
                 <a href="#">hi@boring.studio</a>
               </span>
             </div>
+          </div>
+        </section>
+
+
+        <section 
+        className="hero-img pt-10 pb-20" data-scroll-section>
+          <div className="hero-img-container  m-auto pt-10">
+            <img loading="lazy" className="rounded-2xl h-[30rem] object-cover w-[95%] m-auto" src="https://images.pexels.com/photos/119810/pexels-photo-119810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
           </div>
         </section>
 
@@ -83,7 +86,7 @@ const About = () => {
                 <h1 className="num md:text-7xl text-5xl">Vocationals</h1>
               </div>
               <div className="sitcky-content-h1">
-                <p className="pb-10 pt-5">
+                <p className="pb-10 ">
 
                 <span className=""><TextGenerateEffectDemo words={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima animi error est neque magnam. Doloribus aut omnis laborum hic rerum dignissimos blanditiis expedita facilis consequuntur, voluptate voluptates quasi consequatur accusantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima animi error est neque magnam. Doloribus aut omnis laborum hic rerum dignissimos blanditiis expedita facilis consequuntur, voluptate voluptates quasi consequatur accusantium?"} /> </span>
 
@@ -99,7 +102,7 @@ const About = () => {
 
         <section className="hero-img" data-scroll-section>
           <div className="hero-img-container m-auto pt-10">
-            <img loading="lazy" className=" md:w-[50rem] w-[90%] m-auto rounded-2xl" src={AboutFeature} alt="" />
+            <img loading="lazy" className=" h-[30rem] object-cover w-[95%] m-auto rounded-2xl" src={AboutFeature} alt="" />
           </div>
         </section>
 

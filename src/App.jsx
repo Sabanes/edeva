@@ -8,6 +8,7 @@ import Menu from './sections/navigation/navigation';
 import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
+import Hero from './sections/hero/Hero';
 
 
 
@@ -15,13 +16,14 @@ function Home() {
   return (
     <>
     <ScrollToTop>
-    <Menu />
-    <About />
-   <Carousel />
-    <NotDance />
-    <Team />
-    <InfiniteMovingCardsDemo />
-    <Footer />
+      <Menu />
+        <Hero />
+        <About />
+        <Carousel />
+        <NotDance />
+        <Team />
+        <InfiniteMovingCardsDemo />
+      <Footer />
     </ScrollToTop>
     </>
   );

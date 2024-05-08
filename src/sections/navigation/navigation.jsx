@@ -73,7 +73,7 @@ const Menu = () => {
           <Link className="opacity-80" to="/">EDEVA</Link>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[#1B1D1C] md:text-md  text-sm shadow ">
+        <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span class="relative text-white group-hover:text-[#1B1D1C] uppercase ">→ Menu </span>
           </button>
@@ -87,7 +87,7 @@ const Menu = () => {
         <div className="menu-close ">
           <LanguageSelector />
           </div>
-          <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[#1B1D1C] md:text-md  text-sm shadow ">
+          <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span onClick={toggleMenu} class="relative text-white group-hover:text-[#1B1D1C] uppercase ">→ Close </span>
           </button>

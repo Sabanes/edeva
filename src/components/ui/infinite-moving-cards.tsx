@@ -97,7 +97,7 @@ export const InfiniteMovingCards = ({
             <blockquote>
               <div
                 aria-hidden="true"
-                className=" bg-[#1b211e] rounded-2xl -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+                className=" bg-[var(--main)] rounded-2xl -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
                 {item.quote}

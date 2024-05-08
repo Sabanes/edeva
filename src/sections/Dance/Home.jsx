@@ -15,10 +15,10 @@ const NotDance = () => {
   return (
     <motion.div className="Home flex flex-col py-10">
 
-        <h1 className="text-[3rem] text-center">Dance with us</h1>
+        <h1 className="md:text-7xl text-5xl relative top-20 text-center">Dance with us</h1>
 
 
-      <div className="projects-nav bg-[#1b211e] rounded-2xl px-7">
+      <div className="projects-nav  bg-[var(--main)] rounded-2xl px-7">
         <div className="projects-nav-container py-10">
           <div className="project-item">
             <Link to="/project">

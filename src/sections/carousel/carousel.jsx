@@ -3,22 +3,10 @@ import { useRef } from "react";
 
 const Carousel = () => {
   return (
-<section className=" w-[99.999%] m-auto bg-[#1b211e] rounded-b-2xl">
+<section className=" w-[99.999%] m-auto bg-[var(--main)] rounded-b-2xl">
 
-          <div className="flex md:flex-row flex-col md:w-[70%] w-full m-auto">
-            <div className="flex flex-col justify-center md:items-start  pl-5 pt-10 text-xl text-white lighter">
-              <span>Unusual Designs</span>
-              <span>Digital Creative Studio</span>
-              <span className=" underline">Toronto 0982</span>
-              <span className=" underline">0912 King street</span>
-              <br />
-              <span className="py-5">
-                <a href="#">hi@boring.studio</a>
-              </span>
-            </div>
-            <div className="w-full flex md:justify-end justify-center items-end p-5 md:pr-10 m-auto text-center ">
-              <h1 className="md:text-7xl text-6xl text-white">Danceplace</h1>
-            </div>
+          <div className=" m-auto md:pl-10 pl-10" >
+              <h1 className="md:text-7xl text-6xl text-white relative top-20">Danceplace</h1>
           </div>
           <div className="hero-img-container">
 
