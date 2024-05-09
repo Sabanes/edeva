@@ -34,7 +34,7 @@ const LanguageSelector = () => {
           <Menu.Button
             aria-label="usermenu-button"
           >
-       <button class="green box group relative  px-5 py-1 overflow-hidden rounded-full bg-black md:text-md  text-sm shadow ">
+          <button class="green box group relative px-5 py-1 overflow-hidden rounded-full bg-black md:text-md  text-sm shadow ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span class="relative text-white group-hover:text-black uppercase ">{t("Language")}</span>
           </button>

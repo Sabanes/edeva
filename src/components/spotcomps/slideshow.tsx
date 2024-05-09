@@ -10,25 +10,27 @@ export function ImagesSliderDemo() {
     "https://images.pexels.com/photos/898220/pexels-photo-898220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
    ];
   return (
-    <ImagesSlider className=" w-screen h-screen bg-[vat(--main)]" images={images}>
-              <div className="flex justify-center items-center absolute z-50">
-                  
-                <div className="w-screen h-screen pl-20 flex flex-col justify-end items-start">
+    <ImagesSlider className=" max-w-[1500px] w-screen h-full bg-[vat(--main)]" images={images}>
+
+              
+              <div className=" absolute max-w-[30rem] pt-3 h-[50px] w-[50vw] sm:h-[60px] sm:w-[45vw]  lg:w-[35vw] 2xl:h-[70px] bg-[var(--main)] text-white bottom-0 pb-3 right-0 z-[99] translate-y-px rounded-tl-full font-bold flex items-center justify-center ">
+                <a href="/news"><p className="cursor-pointer  md:text-lg text-xs relative left-2  uppercase ">Upcoming events</p></a>
+              </div>
+
+              <motion.h3
+              initial={{opacity: 0, y:-10}} animate={{opacity: 1, y: 0}} transition={{delay: 3, duration: 2}}
+              className="md:text-3xl text-xl uppercase text-white relative bottom-20">
+                        Escola de dança
+              </motion.h3>
+              
+              <div className=" absolute z-50">
+                <div className="w-screen h-screen max-w-[1500px] md:pl-20 pl-3 flex flex-col justify-end items-start">
                   <motion.h1
-                      initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y:0}} transition={{delay: 2, duration: 1.7}}
-                      className="w-full notgeist font-bold text-[7.5rem] leading-none tracking-widest">
+                      initial={{opacity: 0, y: 50}} animate={{opacity: 1, y:0}} transition={{delay: 3, duration: 1.7}}
+                      className="w-full relative md:right-10 notgeist font-bold 2xl:text-[7rem] md:text-[9vw] sm:text-[3rem] text-[3rem] md:pb-[3rem] pb-[8rem] leading-none tracking-widest">
                        EVA VIEIRA <br /> DE ALMEIDA
                   </motion.h1>
-                  <p className="text-left text-white text-xl">scroll down <span className="text-sm">↓</span></p>
                 </div>
-
-
-{/*                   <motion.button 
-                  initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y:0}} transition={{delay: 2.3, duration: 2}}
-                  className="group relative  px-5 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md mt-10 text-lg shadow ">
-                    <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                    <span className="relative text-white group-hover:text-[#1B1D1C] uppercase "> Explore </span>
-                  </motion.button> */}
               </div>
     </ImagesSlider>
   );

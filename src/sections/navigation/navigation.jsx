@@ -9,10 +9,9 @@ import LanguageSelector from './Langselector'
 
 const menuLinks = [
   { path: "/", label: "Home" },
-  { path: "/contact", label: "Contact" },
-  { path: "/team", label: "Our Team" },
   { path: "/news", label: "News" },
-
+  { path: "/team", label: "Our Team" },
+  { path: "/contact", label: "Contact" },
 ];
 
 const Menu = () => {
@@ -57,7 +56,7 @@ const Menu = () => {
   return (
     <div
 
-    className="menu-container" ref={container}>
+    className="menu-container m-auto flex justify-center items-center" ref={container}>
       {/* menu-bar */}
       <motion.div 
           initial={{ opacity: 0, y: -100 }}
@@ -68,28 +67,28 @@ const Menu = () => {
             duration: 1,
             delay: 1,
           }}
-      className="menu-bar">
+      className="menu-bar m-auto">
         <div className="menu-logo">
-          <Link className="opacity-80" to="/">EDEVA</Link>
+          <Link className="bg-white rounded-full px-2 py-1" to="/">EDEVA</Link>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
+        <button class="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-[#1B1D1C] uppercase ">→ Menu </span>
+            <span class="relative text-white group-hover:text-[#1B1D1C] uppercase ">Menu &#8599;</span>
           </button>
         </div>
       </motion.div>
 
       {/* menu-overlay */}
-      <div className="menu-overlay">
+      <div className="menu-overlay max-w-[1500px] m-auto">
         {/* menu-overlay-bar */}
-        <div className="menu-overlay-bar flex flex-row justify-between items-center">
+        <div className="menu-overlay-bar">
         <div className="menu-close ">
           <LanguageSelector />
           </div>
-          <button class="green box group relative  px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
+          <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span onClick={toggleMenu} class="relative text-white group-hover:text-[#1B1D1C] uppercase ">→ Close </span>
+            <span onClick={toggleMenu} class="relative text-white group-hover:text-[#1B1D1C] uppercase ">Close</span>
           </button>
         </div>
 
@@ -110,14 +109,16 @@ const Menu = () => {
             ))}
           </div>
           <div className="menu-info">
-            <div className="menu-info-col mr-2 ">
-              <a href="#">Instagram &#8599;</a>
-              <a href="#">Facebook &#8599;</a>
-              <a href="#">Mahatma &#8599;</a>
+            <div className="menu-info-col mr-2 cursor-pointer ">
+              <a target="_blank" href="https://www.instagram.com/edevaoeiras/">Instagram &#8599;</a>
+              <a target="_blank" href="https://www.facebook.com/edevaoeiras">Facebook &#8599;</a>
+              <a target="_blank" href="https://twitter.com/edevaoeiras">Twitter &#8599;</a>
+              <a target="_blank" href="https://twitter.com/edevaoeiras">Youtube&#8599;</a>
+              <a target="_blank" href="https://www.linkedin.com/in/edevaoeiras">Linkedin &#8599;</a>
             </div>
             <div className="menu-info-col lighter">
-              <p>info@codegrid.com</p>
-              <p>0923 3984 23</p>
+              <p><a className=" cursor-pointer underline " href="mailto:evavieiradealmeida@hotmail.com"> Send e-mail</a>  </p>
+              <p><a className=" cursor-pointer underline" href="tel:+351214412251">Call us</a></p>
             </div>
           </div>
         </div>

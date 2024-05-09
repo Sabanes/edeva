@@ -96,7 +96,6 @@ section.about {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: .1px solid #fff;
   height: 110px;
   padding: 1em 0;
 }

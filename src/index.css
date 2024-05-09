@@ -50,9 +50,11 @@
 }
 
 html {
+  margin: 0 auto;
   max-width: 1500px;
   min-width: 350px;
   min-height: 500px;
+  background-color: #e8e8e8
 }
 
 body {

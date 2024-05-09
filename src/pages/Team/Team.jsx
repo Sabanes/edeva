@@ -13,7 +13,7 @@ const Contact = () => {
         <Menu />
         <HeroParallaxDemo />
 
-        <div className="flex flex-col justify-center items-center md:p-[4rem] py-5  bg-[#1b211e]  rounded-2xl w-[95%] m-auto">
+        <div className="flex flex-col justify-center items-center md:p-[4rem] py-5  bg-[var(--main)]  rounded-2xl w-[95%] m-auto">
 
           <button className="uppercase border border-white text-white rounded-full px-4">
             Founder

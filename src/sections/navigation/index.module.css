@@ -2,13 +2,14 @@
 .menu-overlay-bar {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  max-width: 1500px;
+  width: 100%;
   padding: 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  margin: 0 auto;
 }
 
 .menu-bar {
@@ -29,8 +30,8 @@
 .menu-overlay {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
   height: 100%;
   padding: 2em;
   background: #c6c6c6;

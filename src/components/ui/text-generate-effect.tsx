@@ -56,7 +56,7 @@ export const  TextGenerateEffect = ({
   return (
     <div className={cn("font-light geist", className)}>
       <div className="" ref={ref}>
-        <div className="dark:text-[#e2e2e2] text-[#e2e2e2] pt-5 tracking-wide md:text-3xl text-md">
+        <div className="dark:text-[#e2e2e2] text-[#e2e2e2] tracking-wide md:text-3xl text-md">
           {renderWords()}
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function Hero() {
     return () => context.kill();
   }, []);
   return (
-    <main className="bg-[vat(--main)] overflow-x-hidden md:h-screen h-screen overflow-y-scroll no-scrollbar relative flex justify-center items-center">
+    <main className="bg-[vat(--main)] overflow-x-hidden h-screen overflow-y-scroll no-scrollbar relative flex justify-center items-center">
       <section className="clip_path-container absolute inset-0  mt-[100vh] ">
         <ImagesSliderDemo />
       </section>
