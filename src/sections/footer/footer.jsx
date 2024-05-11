@@ -7,25 +7,25 @@ const Footer = () => {
             <nav className="flex flex-wrap justify-center -mx-5 -my-2">
 
                 <div className="px-5 py-2">
-                    <a href="#" className="text-base leading-6 text-white hover:text-slate-200">
+                    <a href="/" className="text-base leading-6 text-white hover:text-slate-200">
                         Home
                     </a>
                 </div>
 
                 <div className="px-5 py-2">
-                    <a href="#" className="text-base leading-6 text-white hover:text-slate-200">
+                    <a href="/news" className="text-base leading-6 text-white hover:text-slate-200">
                         News
                     </a>
                 </div>
 
                 <div className="px-5 py-2">
-                    <a href="#" className="text-base leading-6 text-white hover:text-slate-200">
+                    <a href="/team" className="text-base leading-6 text-white hover:text-slate-200">
                         Team
                     </a>
                 </div>
 
                 <div className="px-5 py-2">
-                    <a href="#" className="text-base leading-6 text-white hover:text-slate-200">
+                    <a href="/contact" className="text-base leading-6 text-white hover:text-slate-200">
                         Contact
                     </a>
                 </div>
@@ -61,7 +61,7 @@ const Footer = () => {
 
             </div>
             <p className="mt-8 text-base leading-6 text-center text-white">
-                © 2024 EDEVA, Inc. All rights reserved.
+                © 2024 EDEVA     All rights reserved.
             </p>
         </div>
     </footer>

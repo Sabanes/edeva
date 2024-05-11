@@ -1,9 +1,9 @@
 import React from "react";
-import "./Project.css";
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import transition from "../../components/transition/Transition";
+import Footer from "../footer/footer";
 
 
 const Project = () => {
@@ -96,9 +96,9 @@ const Project = () => {
             }}
           >
             <p>
-              <b className=" !text-white">impressions</b>
+              <b className=" !text-[var(--main)]">impressions</b>
             </p>
-            <p className=" !text-white">
+            <p className=" !text-[var(--main)]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
               nobis itaque laboriosam! Temporibus esse eius iusto voluptatum
               maiores at asperiores, quo quos omnis delectus cumque consequuntur
@@ -131,6 +131,8 @@ const Project = () => {
 
         </div>
       </div>
+
+      <Footer />
     </>
   );
 };

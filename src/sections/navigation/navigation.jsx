@@ -65,7 +65,7 @@ const Menu = () => {
             type: "spring",
             stiffness: 50,
             duration: 1,
-            delay: 1,
+            delay: 2,
           }}
       className="menu-bar m-auto">
         <div className="menu-logo">

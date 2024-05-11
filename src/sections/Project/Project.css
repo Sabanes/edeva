@@ -1,7 +1,7 @@
 .project-container {
   width: 100vw;
   height: 100vh;
-  background: #1B1D1C;
+  background: #fff;
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .project-container * {
-  color: var(--bg);
+  color: #222;
 }
 
 
@@ -62,12 +62,14 @@
   margin: 2em;
   width: 24px;
   height: 24px;
-  background: var(--bg);
+  background: var(--main);
+  color: #fff;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 @media (max-width: 900px) {
   .project-container {
