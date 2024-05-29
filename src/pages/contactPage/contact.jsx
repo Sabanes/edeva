@@ -105,19 +105,19 @@ useGSAP(() => {
     <div className="h-svh w-full pb-10 flex flex-col items-center  justify-center  overflow-x-hidden bg-white">
       <div className="flex flex-col items-center justify-center relative top-5">
         <p
-        className="purple uppercase border border-[#1b211e]  rounded-full px-3">Try 1 lesson for free</p>
+        className="purple uppercase border border-[#1b211e]  rounded-full px-3">Try 1 lesson for free</p> {/* Link to form */}
         <motion.h1
                 initial={{opacity: 0, y: 100}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 1}}
         className="text-center md:text-[9vw] pb-10 pt-2 text-[15vw] uppercase leading-none text-[#1b211e] ">
        <span>→</span>No need <br /> <span className="md:text-[9vw] text-[11vw] md:pr-7">to</span>
-        be shy
+        be shy {/* change ""Feel free to reach out"" */}
         </motion.h1>
 
           <button class="greeni boxi group relative  md:px-10 px-8 md:py-2 py-1 overflow-hidden rounded-full bg-black md:text-lg shadow">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-black uppercase">→ Just Dance </span>
+            <span class="relative text-white group-hover:text-black uppercase">→ Move </span>
           </button>
 
           <p className=" text-center pt-10 md:max-w-[40%] max-w-[95%]"> - Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore quis eaque modi deserunt qui dolorum impedit saepe ducimus! Voluptatibus est veritatis ex nulla, error omnis tempore odio debitis repellat!</p>
@@ -219,7 +219,7 @@ useGSAP(() => {
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email 📧</span>
+            <span className='text-white font-medium mb-4'>Your Best Email 📧</span>
             <input
               type='email'
               name='email'

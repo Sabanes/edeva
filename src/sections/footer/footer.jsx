@@ -70,3 +70,7 @@ const Footer = () => {
 }
 
 export default Footer
+
+
+
+/* Oeiras W. , Mah, Terzihan  add and loop */

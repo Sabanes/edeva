@@ -4,7 +4,7 @@
 @import url("./sections/Project/Project.css");
 @import url("./pages/contactPage/index.module.css");
 @import url("./pages/Team/index.module.css");
-@import url("./pages/News/nostopmonth/index.module.css");
+@import url("./pages/News/index.module.css");
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +15,7 @@
   box-sizing: border-box;
   font-family: "geist" sans-serif;
   outline: none;
+  
 }
 
 
@@ -44,6 +45,17 @@
   src: url("/fonts/Oswald/static/Oswald-Regular.ttf");
   font-weight: normal;
 }
+
+@font-face {
+  font-family: "Orator";
+  src: url("/fonts/Orator-Std-Font.otf");
+  font-weight: normal;
+}
+
+.orator {
+  font-family: "Orator";
+}
+
 @font-face {
   font-family: "notgeist";
   src: url("/fonts/Oswald/static/Oswald-Bold.ttf");
@@ -53,7 +65,6 @@
 html {
   margin: 0 auto;
   max-width: 1500px;
-  min-width: 350px;
   min-height: 500px;
   background-color: #e8e8e8
 }

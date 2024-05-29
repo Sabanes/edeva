@@ -22,9 +22,9 @@ const Contact = () => {
 
           <div className="flex md:flex-row flex-col-reverse flex-1 pb-10 px-7">
 
-            <div className="md:w-[90%] w-full pt-10 m-auto">
+            <div className="md:w-[80%] w-full pt-10 m-auto">
               <h3 className="font-bold text-xl pb-5 md:text-left text-center text-white">Alguma Coisa</h3>
-              <p className="md:text-left text-center m-auto md:pr-3 text-white">
+              <p className="md:text-left text-center m-auto md:pr-3 text-white min-w-[50%]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae explicabo quas sapiente, vel excepturi dolore, autem incidunt, rem saepe provident delectus minima commodi in ipsum distinctio accusamus voluptatum accusantium.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae explicabo quas sapiente, vel excepturi dolore, autem incidunt, rem saepe provident delectus minima commodi in ipsum distinctio accusamus voluptatum accusantium.
               </p>
@@ -36,7 +36,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <img className="relative top-3 w-[90%] m-auto rounded-2xl" loading="lazy" src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
+            <img className="relative top-3 md:w-[60%] w-[80%] m-auto rounded-2xl" loading="lazy" src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
 
           </div>
         </div>

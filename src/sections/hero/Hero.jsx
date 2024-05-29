@@ -20,12 +20,6 @@ export default function Hero() {
           ease: "power2.inOut",
           duration: 0.9,
           clipPath: "inset(0%)",
-        })
-        .to(".hero_title", {
-          top: 0,
-          stagger: 0.1,
-          duration: 0.6,
-          ease: "power2.inOut",
         });
     });
     return () => context.kill();

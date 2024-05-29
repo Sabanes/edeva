@@ -1,63 +1,48 @@
 import React, { useEffect, useRef } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "../utils/utils";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { cn } from "../utils/utils";
 
-export const  TextGenerateEffect = ({
+export const TextGenerateEffect = ({
   words,
   className,
 }: {
   words: string;
   className?: string;
 }) => {
-  const [scope, animate] = useAnimate();
-  const [ref, inView] = useInView({ triggerOnce: false });
-  const wordsArray = useRef(words.split(" "));
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5, // Adjust threshold as per your requirement
+  });
+  const wordsArray = words.split(" ");
 
   useEffect(() => {
     if (inView) {
-      animate(
-        "span",
-        {
-          opacity: 1,
-        },
-        {
-          duration: 2,
-          delay: stagger(0.2),
-        }
-      );
+      controls.start("visible");
     }
-  }, [inView]);
-
-  useEffect(() => {
-    if (!inView) {
-      // Reset animation when leaving view
-      animate("span", { opacity: 0 });
-    }
-  }, [inView]);
-
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.current.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="dark:text-[#e2e2e2] text-[#e2e2e2]  opacity-0 "
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
-    );
-  };
+  }, [controls, inView]);
 
   return (
-    <div className={cn("font-light geist", className)}>
-      <div className="" ref={ref}>
-        <div className="dark:text-[#e2e2e2] text-[#e2e2e2] tracking-wide md:text-3xl text-md">
-          {renderWords()}
+    <div className={cn("font-bold", className)}>
+      <div className="mt-4">
+        <div className="text-2xl leading-snug tracking-wide">
+          <motion.div ref={ref}>
+            {wordsArray.map((word, idx) => (
+              <motion.span
+                key={word + idx}
+                className="opacity-0"
+                variants={{
+                  visible: { opacity: 1, transition: { duration: 0.4, delay: idx * 0.2 } },
+                  hidden: { opacity: 0 },
+                }}
+                initial="hidden"
+                animate={controls}
+              >
+                {word}{" "}
+              </motion.span>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>

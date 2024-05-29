@@ -11,7 +11,7 @@ const menuLinks = [
   { path: "/", label: "Home" },
   { path: "/news", label: "News" },
   { path: "/team", label: "Our Team" },
-  { path: "/contact", label: "Contact" },
+  { path: "/contact", label: "Get in touch" },
 ];
 
 const Menu = () => {
@@ -72,9 +72,9 @@ const Menu = () => {
           <Link className="bg-white rounded-full px-2 py-1" to="/">EDEVA</Link>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button class="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md  text-sm shadow ">
+        <button class="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-[#1B1D1C] uppercase ">Menu &#8599;</span>
+            <span class="relative text-white group-hover:text-[var(--main)] uppercase ">Menu &#8599;</span>
           </button>
         </div>
       </motion.div>
@@ -86,9 +86,9 @@ const Menu = () => {
         <div className="menu-close ">
           <LanguageSelector />
           </div>
-          <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow ">
+          <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span onClick={toggleMenu} class="relative text-white group-hover:text-[#1B1D1C] uppercase ">Close</span>
+            <span onClick={toggleMenu} class="relative text-white group-hover:text-[var(--main)] uppercase ">Close</span>
           </button>
         </div>
 
@@ -113,8 +113,8 @@ const Menu = () => {
               <a target="_blank" href="https://www.instagram.com/edevaoeiras/">Instagram &#8599;</a>
               <a target="_blank" href="https://www.facebook.com/edevaoeiras">Facebook &#8599;</a>
               <a target="_blank" href="https://twitter.com/edevaoeiras">Twitter &#8599;</a>
-              <a target="_blank" href="https://twitter.com/edevaoeiras">Youtube&#8599;</a>
-              <a target="_blank" href="https://www.linkedin.com/in/edevaoeiras">Linkedin &#8599;</a>
+{/*               <a target="_blank" href="https://twitter.com/edevaoeiras">Youtube&#8599;</a>
+ */}{/*               <a target="_blank" href="https://www.linkedin.com/in/edevaoeiras">Linkedin &#8599;</a> */}
             </div>
             <div className="menu-info-col lighter">
               <p><a className=" cursor-pointer underline " href="mailto:evavieiradealmeida@hotmail.com"> Send e-mail</a>  </p>

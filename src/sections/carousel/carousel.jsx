@@ -5,8 +5,8 @@ const Carousel = () => {
   return (
 <section className=" w-[99.999%] m-auto bg-[var(--main)] rounded-b-2xl">
 
-          <div className=" m-auto md:pl-10 pl-10" >
-              <h1 className="md:text-7xl text-6xl text-white relative top-20">Danceplace</h1>
+          <div className=" m-auto pl-4" >
+              <h1 className="md:text-7xl text-6xl text-white relative md:top-20 top-40 pl-5">Danceplace</h1>
           </div>
           <div className="hero-img-container">
 

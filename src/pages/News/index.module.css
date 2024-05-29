@@ -1,0 +1,19 @@
+
+ .marquee-text {
+    
+    animation: marquee 7s infinite linear; 
+      
+ }     
+
+@keyframes marquee {
+
+  0% {
+     left: 100%;
+  }
+
+  100% {
+     left: 0;
+     transform: translateX(-100%);
+  }
+
+}

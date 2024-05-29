@@ -28,7 +28,7 @@ const NotDance = () => {
                     <img src={Project1Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Hip-Hop</h2>
+                    <h2 className="text-white">Tecnica de dança classica</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -50,7 +50,7 @@ const NotDance = () => {
                     <img src={Project2Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Jazz</h2>
+                    <h2 className="text-white">Contemporâneo</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -72,7 +72,7 @@ const NotDance = () => {
                     <img src={Project3Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Impressions</h2>
+                    <h2 className="text-white">Jazz</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -94,7 +94,7 @@ const NotDance = () => {
                     <img src={Project4Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Stellar</h2>
+                    <h2 className="text-white">Hip-hop</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -115,7 +115,7 @@ const NotDance = () => {
                     <img src={Project4Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Stellar</h2>
+                    <h2 className="text-white">Danças Tradicionais</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -137,7 +137,28 @@ const NotDance = () => {
                     <img src={Project5Img} alt="" />
                   </div>
                   <div className="project-name">
-                    <h2 className="text-white">Byte</h2>
+                    <h2 className="text-white">Preparação física</h2>
+                  </div>
+                </div>
+                <div className="project-date">
+                  <p className="text-white">development</p>
+                  <p className="text-white">/2018</p>
+                </div>
+                <div className="project-dir">
+                  <p className="text-white">&#8599;</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="project-item">
+            <Link to="/project">
+              <div className="project-link">
+                <div className="project-l">
+                  <div className="project-link-img">
+                    <img src={Project5Img} alt="" />
+                  </div>
+                  <div className="project-name">
+                    <h2 className="text-white">Teatro musical</h2>
                   </div>
                 </div>
                 <div className="project-date">
@@ -161,3 +182,6 @@ const NotDance = () => {
 };
 
 export default Transition(NotDance);
+
+
+/* tecnica de dança classica, contemporaneo, jazz, hip hop. danças tradicionais, teatro musical, preparaçao fisica   */
