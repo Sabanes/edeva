@@ -42,7 +42,7 @@ const About = () => {
             </div>
             <div className="sitcky-content-h1 relative">
               
-              <TextGenerateEffect className="font-light pb-10 text-[var(--main)] md:max-w-[90%] max-w-full" words={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima animi error est neque magnam. Doloribus aut omnis laborum hic rerum dignissimos blanditiis expedita facilisnis laborum hic rerum dignissimos blanditiis expedita facilis consequuntur,"} />
+              <TextGenerateEffect className=" font-light pb-10 text-[var(--main)] md:max-w-[90%] max-w-full" words={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima animi error est neque magnam. Doloribus aut omnis laborum hic rerum dignissimos blanditiis expedita facilisnis laborum hic rerum dignissimos blanditiis expedita facilis consequuntur expedita facilis consequuntur expedita facilis consequuntur expedita facilis consequuntur"} />
 
               <button className="green box group relative px-4 py-2 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border">
                 <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>

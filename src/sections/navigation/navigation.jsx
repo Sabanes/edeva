@@ -113,8 +113,8 @@ const Menu = () => {
               <a target="_blank" href="https://www.instagram.com/edevaoeiras/">Instagram &#8599;</a>
               <a target="_blank" href="https://www.facebook.com/edevaoeiras">Facebook &#8599;</a>
               <a target="_blank" href="https://twitter.com/edevaoeiras">Twitter &#8599;</a>
-{/*               <a target="_blank" href="https://twitter.com/edevaoeiras">Youtube&#8599;</a>
- */}{/*               <a target="_blank" href="https://www.linkedin.com/in/edevaoeiras">Linkedin &#8599;</a> */}
+{/*               <a target="_blank" href="https://twitter.com/edevaoeiras">Youtube&#8599;</a>       */}
+{/*               <a target="_blank" href="https://www.linkedin.com/in/edevaoeiras">Linkedin &#8599;</a>     */}
             </div>
             <div className="menu-info-col lighter">
               <p><a className=" cursor-pointer underline " href="mailto:evavieiradealmeida@hotmail.com"> Send e-mail</a>  </p>

@@ -28,7 +28,7 @@ const LanguageSelector = () => {
       <div>
         <Menu
           as="div"
-          className="px-3 pl-0 relative flex"
+          className="pl-0 relative flex"
           aria-label="usermenu"
         >
           <Menu.Button

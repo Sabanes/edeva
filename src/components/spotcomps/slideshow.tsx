@@ -27,7 +27,7 @@ export function ImagesSliderDemo() {
       <motion.h3
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: [0, 1.1, 1] }}
-        transition={{ delay: 2.5, duration: 2, ease: "easeInOut" }}
+        transition={{ delay: 2, duration: 2, ease: "easeInOut" }}
         className="relative  left-1 md:text-6xl sm:text-4xl text-3xl uppercase text-white z-10 text-center opacity-100"
       >
         Escola de dança <br />
