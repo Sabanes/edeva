@@ -21,7 +21,7 @@ const NotDance = () => {
       <div className="projects-nav  bg-[var(--main)] rounded-2xl px-7">
         <div className="projects-nav-container py-10">
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/tecnica-de-dança-classica">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -43,7 +43,7 @@ const NotDance = () => {
           </div>
 
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Contemporâneo">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -65,7 +65,7 @@ const NotDance = () => {
           </div>
 
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Jazz">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -87,7 +87,7 @@ const NotDance = () => {
           </div>
 
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Hiphop">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -108,7 +108,7 @@ const NotDance = () => {
             </Link>
           </div>
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Danças-tradicionais">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -130,7 +130,7 @@ const NotDance = () => {
           </div>
 
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Preparação-física">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -151,7 +151,7 @@ const NotDance = () => {
             </Link>
           </div>
           <div className="project-item">
-            <Link to="/project">
+            <Link to="/Teatro-musical">
               <div className="project-link">
                 <div className="project-l">
                   <div className="project-link-img">
@@ -174,9 +174,6 @@ const NotDance = () => {
         </div>
       </div>
 
-
-
-
     </motion.div>
   );
 };
@@ -184,4 +181,3 @@ const NotDance = () => {
 export default Transition(NotDance);
 
 
-/* tecnica de dança classica, contemporaneo, jazz, hip hop. danças tradicionais, teatro musical, preparaçao fisica   */

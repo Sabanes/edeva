@@ -74,7 +74,7 @@ export const ImagesSlider = ({
     if (autoplay) {
       interval = setInterval(() => {
         handleNext();
-      }, 3000);
+      }, 5000);
     }
 
     return () => {
@@ -119,7 +119,7 @@ export const ImagesSlider = ({
   return (
     <div
       className={cn(
-        "overflow-hidden object-cover h-full w-full relative flex items-center justify-center",
+        "overflow-hidden h-full w-full relative flex items-center justify-center",
         className
       )}
       style={{
@@ -129,7 +129,7 @@ export const ImagesSlider = ({
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
-          className={cn("absolute inset-0 object-cover z-40", overlayClassName)}
+          className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)}
         />
       )}
 

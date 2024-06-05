@@ -2,11 +2,11 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import transition from "../../components/transition/Transition";
-import Footer from "../footer/footer";
+import transition from "../../../components/transition/Transition";
+import Footer from "../../footer/footer";
 
 
-const Project = () => {
+const Dt = () => {
   return (
     <>
       <div className="bg"></div>
@@ -137,4 +137,4 @@ const Project = () => {
   );
 };
 
-export default transition(Project);
+export default transition(Dt);
