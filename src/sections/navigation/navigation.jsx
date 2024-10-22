@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { motion } from "framer-motion";
-import LanguageSelector from './Langselector'
 
 const menuLinks = [
   { path: "/", label: "Home" },
@@ -72,9 +71,9 @@ const Menu = () => {
           <Link className="bg-white rounded-full px-2 py-1" to="/">EDEVA</Link>
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button class="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border">
-            <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-[var(--main)] uppercase ">Menu &#8599;</span>
+        <button className="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border">
+            <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+            <span className="relative text-white group-hover:text-[var(--main)] uppercase ">Menu &#8599;</span>
           </button>
         </div>
       </motion.div>
@@ -84,7 +83,6 @@ const Menu = () => {
         {/* menu-overlay-bar */}
         <div className="menu-overlay-bar">
         <div className="menu-close ">
-          <LanguageSelector />
           </div>
           <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>

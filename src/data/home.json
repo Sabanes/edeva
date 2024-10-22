@@ -1,0 +1,61 @@
+{
+    "title": "Dance with us",
+    "projects": [
+      {
+        "id": 1,
+        "name": "Tecnica de dança classica",
+        "category": "experience",
+        "year": "2022",
+        "image": "public/assets/Images/project-1.png",
+        "link": "/contact"
+      },
+      {
+        "id": 2,
+        "name": "Contemporâneo",
+        "category": "development",
+        "year": "2023",
+        "image": "public/assets/Images/project-2.png",
+        "link": "/contact"
+      },
+      {
+        "id": 3,
+        "name": "Jazz",
+        "category": "portfolio",
+        "year": "2019",
+        "image": ".public/assets/Images/project-3.png",
+        "link": "/contact"
+      },
+      {
+        "id": 4,
+        "name": "Hip-hop",
+        "category": "experience",
+        "year": "2021",
+        "image": "public/assets/Images/project-4.png",
+        "link": "/contact"
+      },
+      {
+        "id": 5,
+        "name": "Danças Tradicionais",
+        "category": "experience",
+        "year": "2021",
+        "image": "public/assets/Images/project-5.png",
+        "link": "/contact"
+      },
+      {
+        "id": 6,
+        "name": "Preparação física",
+        "category": "development",
+        "year": "2018",
+        "image": "public/assets/Images/project-6.png",
+        "link": "/contact"
+      },
+      {
+        "id": 7,
+        "name": "Teatro musical",
+        "category": "development",
+        "year": "2018",
+        "image": "public/assets/Images/project-7.png",
+        "link": "/contact"
+      }
+    ]
+  }

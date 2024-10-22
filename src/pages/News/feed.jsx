@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Transition from "../../components/transition/Transition";
 import Menu from "../../sections/navigation/navigation";
-import News from "./news";
 
 
 const Feed = () => {
@@ -11,28 +10,26 @@ const Feed = () => {
 <>
 
     <Menu />
-    <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2  items-center gap-8 max-w-6xl mx-auto">
+    <section className="w-full px-8 py-12 pt-32 grid grid-cols-1 md:grid-cols-2  items-center gap-8 max-w-6xl mx-auto">
       <div>
         <span className="block  geist mb-4 text-xs md:text-sm text-[#1b211e] font-medium">
             News
         </span>
         <h3 className="text-6xl  geist md:text-6xl text-[#1b211e] font-semibold">
-            Check out upcoming events
+            Check out upcoming events on X
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
-          error repellat voluptatibus ad.
+          Every event is unique and special. We have prepared a list of events that you can attend on our X account
         </p>
         <button 
         class="group relative  px-3 py-2 overflow-hidden rounded-full outline-none mt-2 md:text-md text-sm shadow bg-[#1b211e]">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-[#1B1D1C] uppercase "> Next Event </span>
+            <span class="relative text-white group-hover:text-[#1B1D1C] uppercase "> Check out </span>
           </button>
       </div>
       <ShuffleGrid />
     </section>
 
-    <News />
 
   </>
   );

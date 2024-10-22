@@ -3,19 +3,15 @@ import { useRef } from "react";
 
 const Carousel = () => {
   return (
-<section className=" w-[99.999%] m-auto bg-[var(--main)] rounded-b-2xl">
+    <section className=" w-[99.999%] m-auto bg-[var(--main)] rounded-b-2xl">
+              <div className="m-auto relative h-20" >
+                  <h1 className="md:text-7xl sm:text-6xl  text-white relative md:top-20 top-40 pl-5">Danceplace</h1>
+              </div>
+              <div className="hero-img-container">
+              </div>
+          <HorizontalScrollCarousel />
 
-          <div className=" m-auto pl-4" >
-              <h1 className="md:text-7xl text-6xl text-white relative md:top-20 top-40 pl-5">Danceplace</h1>
-          </div>
-          <div className="hero-img-container">
-
-          </div>
-
-
-      <HorizontalScrollCarousel />
-
-</section>
+    </section>
 
   );
 };
@@ -64,37 +60,37 @@ export default Carousel;
 
 const cards = [
   {
-    url: "/imgs/abstract/1.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/samples/carousel-1",
     title: "Title 1",
     id: 1,
   },
   {
-    url: "/imgs/abstract/2.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/samples/carousel-2",
     title: "Title 2",
     id: 2,
   },
   {
-    url: "/imgs/abstract/3.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/samples/carousel-3",
     title: "Title 3",
     id: 3,
   },
   {
-    url: "/imgs/abstract/4.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/carousel-4",
     title: "Title 4",
     id: 4,
   },
   {
-    url: "/imgs/abstract/5.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/samples/carousel-5",
     title: "Title 5",
     id: 5,
   },
   {
-    url: "/imgs/abstract/6.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/carousel-6",
     title: "Title 6",
     id: 6,
   },
   {
-    url: "/imgs/abstract/7.jpg",
+    url: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/carousel-7",
     title: "Title 7",
     id: 7,
   },

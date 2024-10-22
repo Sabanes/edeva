@@ -4,6 +4,7 @@
     min-height: 100vh;
     
   }
+
   
   .about section.about-us {
     height: auto;
@@ -35,17 +36,17 @@
   .about-sticky-1 {
     width: 100%;
     height: 100vh;
-    position: sticky;
     top: 0;
     background: #fff;
     color: var(--main);
+    position: relative;
     padding: 4em 1em 15em 1em;
   }
 
   .about-sticky-2 {
     width: 100%;
     height: 100vh;
-    position: sticky;
+    position: relative;
     top: 0;
     background: var(--main);
     padding: 3em 1em 20em 1em;
@@ -61,12 +62,9 @@
   }
   
   .sticky-content h1 {
-    font-size: 50px !important;
+    font-size: 7vw !important;
   }
   
-  .sticky-content h1.num {
-    font-size: 120px !important;
-  }
   
   .more-clients {
     position: relative;
@@ -160,14 +158,15 @@
       gap: 2em;
       width: 100%;
     }
+
+    .about-sticky-1 {
+      height: 120vh;
+    }
   
     .sticky-content h1 {
-      font-size: 30px !important;
+      font-size: 13vw !important;
     }
   
-    .sticky-content h1.num {
-      font-size: 60px !important;
-    }
   
     .more-clients .more-clients-logos {
       flex-direction: column;

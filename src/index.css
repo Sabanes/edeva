@@ -55,6 +55,8 @@
   font-family: "Orator";
 }
 
+
+
 @font-face {
   font-family: "notgeist";
   src: url("/fonts/Oswald/static/Oswald-Bold.ttf");
@@ -65,14 +67,13 @@ html {
   margin: 0 auto;
   max-width: 1500px;
   min-height: 500px;
-  background-color: #e8e8e8
+  background-color: white
 }
 
 body {
-  background-color: transparent !important;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 320px;
+  min-width: 300px;
   overflow-x: hidden !important;
   background-color: #fff !important;
   

@@ -1,0 +1,49 @@
+{
+    "form": {
+      "title": "Questions?",
+      "subtitle": "ASK HERE...",
+      "name_label": "Your Name 😁",
+      "name_placeholder": "What's your name?",
+      "email_label": "Your Best Email 📧",
+      "email_placeholder": "What's your e-mail address?",
+      "message_label": "Your question 💬",
+      "message_placeholder": "What do you want to ask?",
+      "submit_button": "Send",
+      "loading_button": "Sending..."
+    },
+    "contact_info": {
+      "contacts": {
+        "title": "Contacts",
+        "email": "example@gmail.com",
+        "phone": "+233-333-333"
+      },
+      "social": {
+        "title": "Social",
+        "instagram": "Instagram",
+        "instagram_url": "https://www.instagram.com/",
+        "facebook": "Facebook",
+        "facebook_url": "https://www.facebook.com/"
+      },
+      "location": {
+        "title": "Location",
+        "google_maps": "Google Maps",
+        "google_maps_url": "https://www.google.com/maps",
+        "apple_maps": "Apple Maps",
+        "apple_maps_url": "https://maps.apple.com/"
+      },
+      "company": {
+        "title": "Our Company",
+        "company_name": "Mahatma",
+        "company_url": "https://example.com"
+      }
+    },
+    "button": {
+      "cta": "Move →"
+    },
+    "promo_text": {
+      "content": "Try 1 lesson for free"
+    },
+    "description": {
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolore quis eaque modi deserunt qui dolorum impedit saepe ducimus! Voluptatibus est veritatis ex nulla, error omnis tempore odio debitis repellat!"
+    }
+  }

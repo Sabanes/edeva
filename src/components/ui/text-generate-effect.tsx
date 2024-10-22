@@ -25,8 +25,8 @@ export const TextGenerateEffect = ({
                 opacity: 1,
               },
               {
-                duration: 2,
-                delay: stagger(0.1),
+                duration: 1,
+                delay: stagger(0.05),
               }
             );
             observer.unobserve(entry.target);
@@ -68,7 +68,7 @@ export const TextGenerateEffect = ({
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
         <div
-          className="text-2xl leading-snug tracking-wide"
+          className="md:text-2xl text-xl leading-snug tracking-wide"
           ref={containerRef}
         >
           {renderWords()}

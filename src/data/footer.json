@@ -1,0 +1,42 @@
+{
+    "navigation": [
+      {
+        "label": "Home",
+        "url": "/"
+      },
+      {
+        "label": "News",
+        "url": "/news"
+      },
+      {
+        "label": "Team",
+        "url": "/team"
+      },
+      {
+        "label": "Contact",
+        "url": "/contact"
+      },
+      {
+        "label": "Classes",
+        "url": "#"
+      }
+    ],
+    "socialLinks": [
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/edevaoeiras",
+        "icon": "facebook"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/edevaoeiras/",
+        "icon": "instagram"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/edevaoeiras",
+        "icon": "twitter"
+      }
+    ],
+    "copyright": "© 2024 EDEVA All rights reserved."
+  }

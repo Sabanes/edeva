@@ -1,5 +1,4 @@
 'use client';
-import '../i18n'
 import NotDance from './sections/Dance/Home'
 import Carousel from './sections/carousel/carousel';
 import Team from './sections/toolip/team';
@@ -12,7 +11,8 @@ import Hero from './sections/hero/Hero';
 
 
 
-function Home() {
+function App() {
+
   return (
     <>
     <ScrollToTop>
@@ -29,6 +29,6 @@ function Home() {
   );
 }
 
-export default Home
+export default App
 
 

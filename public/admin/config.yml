@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main  # The branch where edits will be committed
+
+media_folder: "public/uploads"  # Where uploaded media files will be stored
+public_folder: "/uploads"  # The URL path for accessing uploaded media
+
+collections:
+  - name: "hero"  # Collection for the Hero section
+    label: "Hero Section"
+    editor:
+      preview: false
+    files:
+      - label: "Hero Content"
+        name: "hero"
+        file: "src/data/hero.json"  # Path to the JSON file
+        fields:
+          - { label: "Title Part 1", name: "title_1_part", widget: "string" }
+          - { label: "Title Part 2", name: "title_2_part", widget: "string" }
+          - { label: "Title Part 3", name: "title_3_part", widget: "string" }
+          - { label: "Upcoming Events Button", name: "Upcoming_events_Button", widget: "string" }
+
+  - name: "contact"  # Collection for the Contact section
+    label: "Contact Section"
+    editor:
+      preview: false
+    files:
+      - label: "Contact Content"
+        name: "contact"
+        file: "src/data/contact.json"  # Path to the JSON file
+        fields:
+          - { label: "Promo Text", name: "promo_text", widget: "string" }
+          - { label: "Form Title", name: "form_title", widget: "string" }
+          - { label: "Form Subtitle", name: "form_subtitle", widget: "string" }
+          - { label: "Name Label", name: "name_label", widget: "string" }
+          - { label: "Email Label", name: "email_label", widget: "string" }
