@@ -1,11 +1,34 @@
 backend:
   name: git-gateway
-  branch: main # Replace with your default branch if different
+  branch: main
 
-media_folder: "public/assets"  # Folder where uploaded files will be stored
-public_folder: "/assets"       # Folder accessible to the public
+media_folder: "public/assets"
+public_folder: "/assets"
 
 collections:
+  - name: "home"
+    label: "Home"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/data/home.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_library:
+                  allow_multiple: false
+              - { label: "Link", name: "link", widget: "string" }
+
   - name: "about"
     label: "About Us"
     files:
@@ -84,75 +107,5 @@ collections:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Company Name", name: "company_name", widget: "string" }
                   - { label: "Company URL", name: "company_url", widget: "string" }
-          - label: "Button"
-            name: "button"
-            widget: "object"
-            fields:
-              - { label: "CTA", name: "cta", widget: "string" }
-          - label: "Promo Text"
-            name: "promo_text"
-            widget: "object"
-            fields:
-              - { label: "Content", name: "content", widget: "string" }
-          - label: "Description"
-            name: "description"
-            widget: "object"
-            fields:
-              - { label: "Content", name: "content", widget: "text" }
 
-  - name: "footer"
-    label: "Footer"
-    files:
-      - label: "Footer Data"
-        name: "footer"
-        file: "src/data/footer.json"
-        fields:
-          - label: "Navigation"
-            name: "navigation"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-          - label: "Social Links"
-            name: "socialLinks"
-            widget: "list"
-            fields:
-              - { label: "Platform", name: "platform", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Icon", name: "icon", widget: "string" }
-          - { label: "Copyright", name: "copyright", widget: "string" }
-
-  - name: "hero"
-    label: "Hero"
-    files:
-      - label: "Hero Section"
-        name: "hero"
-        file: "src/data/hero.json"
-        fields:
-          - { label: "Title Part 1", name: "title_1_part", widget: "string" }
-          - { label: "Title Part 2", name: "title_2_part", widget: "string" }
-          - { label: "Title Part 3", name: "title_3_part", widget: "string" }
-          - { label: "Upcoming Events Button", name: "Upcoming_events_Button", widget: "string" }
-
-  - name: "home"
-    label: "Home"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "src/data/home.json"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "number" }
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Category", name: "category", widget: "string" }
-              - { label: "Year", name: "year", widget: "string" }
-              - label: "Image"
-                name: "image"
-                widget: "image"
-                media_library:
-                  allow_multiple: false
-              - { label: "Link", name: "link", widget: "string" }
+  # Other collections go below...
