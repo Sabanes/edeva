@@ -1,4 +1,5 @@
-import CMS from "decap-cms-app";
-// Initialize the CMS object
-CMS.init();
-// Now the registry is available via the CMS object.
+import CMS from 'decap-cms-app';
+
+// No need for custom template registration here
+// This will now use the default behavior of Decap CMS
+CMS.init();  // Initialize the CMS
