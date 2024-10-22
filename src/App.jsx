@@ -8,10 +8,7 @@ import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
 import Hero from './sections/hero/Hero';
-import CMS from "decap-cms-app";
 
-CMS.init()
-CMS.registerPreviewTemplate("my-template", MyTemplate);
 
 function App() {
 
