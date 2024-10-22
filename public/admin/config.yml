@@ -1,158 +1,252 @@
+---
 backend:
   name: git-gateway
-  branch: main # Replace with your default branch if different
-
-media_folder: "assets"  # Folder where uploaded files will be stored
-public_folder: "/assets"       # Folder accessible to the public
-
+  branch: main
+media_folder: assets
+public_folder: /assets
 collections:
-  - name: "about"
-    label: "About Us"
+  - name: about
+    label: About Us
     files:
-      - label: "About Us Page"
-        name: "about"
-        file: "src/data/about.json"
+      - label: About Us Page
+        name: about
+        file: src/data/about.json
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Reach Us Button", name: "Reach_us_Button", widget: "string" }
-          - { label: "Schedule Button", name: "Schedule_Button", widget: "string" }
-          - { label: "About Us Text", name: "About_us_text", widget: "text" }
-
-  - name: "carousel"
-    label: "Carousel"
+          - label: Title
+            name: title
+            widget: string
+          - label: Reach Us Button
+            name: Reach_us_Button
+            widget: string
+          - label: Schedule Button
+            name: Schedule_Button
+            widget: string
+          - label: About Us Text
+            name: About_us_text
+            widget: text
+  - name: carousel
+    label: Carousel
     files:
-      - label: "Carousel Data"
-        name: "carousel"
-        file: "src/data/carousel.json"
+      - label: Carousel Data
+        name: carousel
+        file: src/data/carousel.json
         fields:
-          - { label: "Carousel Title", name: "Title_Carousel", widget: "string" }
-
-  - name: "contact"
-    label: "Contact"
+          - label: Carousel Title
+            name: Title_Carousel
+            widget: string
+  - name: contact
+    label: Contact
     files:
-      - label: "Contact Page"
-        name: "contact"
-        file: "src/data/contact.json"
+      - label: Contact Page
+        name: contact
+        file: src/data/contact.json
         fields:
-          - label: "Form"
-            name: "form"
-            widget: "object"
+          - label: Form
+            name: form
+            widget: object
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Name Label", name: "name_label", widget: "string" }
-              - { label: "Name Placeholder", name: "name_placeholder", widget: "string" }
-              - { label: "Email Label", name: "email_label", widget: "string" }
-              - { label: "Email Placeholder", name: "email_placeholder", widget: "string" }
-              - { label: "Message Label", name: "message_label", widget: "string" }
-              - { label: "Message Placeholder", name: "message_placeholder", widget: "string" }
-              - { label: "Submit Button", name: "submit_button", widget: "string" }
-              - { label: "Loading Button", name: "loading_button", widget: "string" }
-          - label: "Contact Info"
-            name: "contact_info"
-            widget: "object"
+              - label: Title
+                name: title
+                widget: string
+              - label: Subtitle
+                name: subtitle
+                widget: string
+              - label: Name Label
+                name: name_label
+                widget: string
+              - label: Name Placeholder
+                name: name_placeholder
+                widget: string
+              - label: Email Label
+                name: email_label
+                widget: string
+              - label: Email Placeholder
+                name: email_placeholder
+                widget: string
+              - label: Message Label
+                name: message_label
+                widget: string
+              - label: Message Placeholder
+                name: message_placeholder
+                widget: string
+              - label: Submit Button
+                name: submit_button
+                widget: string
+              - label: Loading Button
+                name: loading_button
+                widget: string
+          - label: Contact Info
+            name: contact_info
+            widget: object
             fields:
-              - label: "Contacts"
-                name: "contacts"
-                widget: "object"
+              - label: Contacts
+                name: contacts
+                widget: object
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Email", name: "email", widget: "string" }
-                  - { label: "Phone", name: "phone", widget: "string" }
-              - label: "Social"
-                name: "social"
-                widget: "object"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
+                  - label: Phone
+                    name: phone
+                    widget: string
+              - label: Social
+                name: social
+                widget: object
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Instagram", name: "instagram", widget: "string" }
-                  - { label: "Instagram URL", name: "instagram_url", widget: "string" }
-                  - { label: "Facebook", name: "facebook", widget: "string" }
-                  - { label: "Facebook URL", name: "facebook_url", widget: "string" }
-              - label: "Location"
-                name: "location"
-                widget: "object"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Instagram
+                    name: instagram
+                    widget: string
+                  - label: Instagram URL
+                    name: instagram_url
+                    widget: string
+                  - label: Facebook
+                    name: facebook
+                    widget: string
+                  - label: Facebook URL
+                    name: facebook_url
+                    widget: string
+              - label: Location
+                name: location
+                widget: object
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Google Maps", name: "google_maps", widget: "string" }
-                  - { label: "Google Maps URL", name: "google_maps_url", widget: "string" }
-                  - { label: "Apple Maps", name: "apple_maps", widget: "string" }
-                  - { label: "Apple Maps URL", name: "apple_maps_url", widget: "string" }
-              - label: "Company"
-                name: "company"
-                widget: "object"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Google Maps
+                    name: google_maps
+                    widget: string
+                  - label: Google Maps URL
+                    name: google_maps_url
+                    widget: string
+                  - label: Apple Maps
+                    name: apple_maps
+                    widget: string
+                  - label: Apple Maps URL
+                    name: apple_maps_url
+                    widget: string
+              - label: Company
+                name: company
+                widget: object
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Company Name", name: "company_name", widget: "string" }
-                  - { label: "Company URL", name: "company_url", widget: "string" }
-          - label: "Button"
-            name: "button"
-            widget: "object"
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Company Name
+                    name: company_name
+                    widget: string
+                  - label: Company URL
+                    name: company_url
+                    widget: string
+          - label: Button
+            name: button
+            widget: object
             fields:
-              - { label: "CTA", name: "cta", widget: "string" }
-          - label: "Promo Text"
-            name: "promo_text"
-            widget: "object"
+              - label: CTA
+                name: cta
+                widget: string
+          - label: Promo Text
+            name: promo_text
+            widget: object
             fields:
-              - { label: "Content", name: "content", widget: "string" }
-          - label: "Description"
-            name: "description"
-            widget: "object"
+              - label: Content
+                name: content
+                widget: string
+          - label: Description
+            name: description
+            widget: object
             fields:
-              - { label: "Content", name: "content", widget: "text" }
-
-  - name: "footer"
-    label: "Footer"
+              - label: Content
+                name: content
+                widget: text
+  - name: footer
+    label: Footer
     files:
-      - label: "Footer Data"
-        name: "footer"
-        file: "src/data/footer.json"
+      - label: Footer Data
+        name: footer
+        file: src/data/footer.json
         fields:
-          - label: "Navigation"
-            name: "navigation"
-            widget: "list"
+          - label: Navigation
+            name: navigation
+            widget: list
             fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-          - label: "Social Links"
-            name: "socialLinks"
-            widget: "list"
+              - label: Label
+                name: label
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+          - label: Social Links
+            name: socialLinks
+            widget: list
             fields:
-              - { label: "Platform", name: "platform", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Icon", name: "icon", widget: "string" }
-          - { label: "Copyright", name: "copyright", widget: "string" }
-
-  - name: "hero"
-    label: "Hero"
+              - label: Platform
+                name: platform
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+          - label: Copyright
+            name: copyright
+            widget: string
+  - name: hero
+    label: Hero
     files:
-      - label: "Hero Section"
-        name: "hero"
-        file: "src/data/hero.json"
+      - label: Hero Section
+        name: hero
+        file: src/data/hero.json
         fields:
-          - { label: "Title Part 1", name: "title_1_part", widget: "string" }
-          - { label: "Title Part 2", name: "title_2_part", widget: "string" }
-          - { label: "Title Part 3", name: "title_3_part", widget: "string" }
-          - { label: "Upcoming Events Button", name: "Upcoming_events_Button", widget: "string" }
-
-  - name: "home"
-    label: "Home"
+          - label: Title Part 1
+            name: title_1_part
+            widget: string
+          - label: Title Part 2
+            name: title_2_part
+            widget: string
+          - label: Title Part 3
+            name: title_3_part
+            widget: string
+          - label: Upcoming Events Button
+            name: Upcoming_events_Button
+            widget: string
+  - name: home
+    label: Home
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "src/data/home.json"
+      - label: Home Page
+        name: home
+        file: src/data/home.json
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Projects"
-            name: "projects"
-            widget: "list"
+          - label: Title
+            name: title
+            widget: string
+          - label: Projects
+            name: projects
+            widget: list
             fields:
-              - { label: "ID", name: "id", widget: "number" }
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Category", name: "category", widget: "string" }
-              - { label: "Year", name: "year", widget: "string" }
-              - label: "Image"
-                name: "image"
-                widget: "image"
+              - label: ID
+                name: id
+                widget: number
+              - label: Name
+                name: name
+                widget: string
+              - label: Category
+                name: category
+                widget: string
+              - label: Year
+                name: year
+                widget: string
+              - label: Image
+                name: image
+                widget: image
                 media_library:
                   allow_multiple: false
-              - { label: "Link", name: "link", widget: "string" }
+              - label: Link
+                name: link
+                widget: string
