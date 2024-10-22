@@ -1,5 +1,5 @@
-import CMS from 'decap-cms-app';
-import MyTemplate from '../../src/components/MyTemplate';
-
-// Register custom template
-CMS.registerPreviewTemplate('my-template', MyTemplate);
+import CMS from "decap-cms-app";
+// Initialize the CMS object
+CMS.init();
+// Now the registry is available via the CMS object.
+CMS.registerPreviewTemplate("my-template", MyTemplate);
