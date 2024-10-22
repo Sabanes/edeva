@@ -6,42 +6,15 @@
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
 
-    
-  </head>
-  <body>
-    <!-- The body is empty, but the scripts will load the CMS when ready -->
     <!-- Load Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin";
-            });
-          }
-        });
-      }
-    </script>
 
-    <!-- Load Decap CMS after DOMContentLoaded to prevent null body error -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Load Decap CMS
-        const script = document.createElement("script");
-        script.src = "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js";
-        script.onload = function () {
-          CMS.init();
-        };
-        document.body.appendChild(script);
-      });
-    </script>
+    <!-- Load Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- Load custom CMS configuration after the CMS script -->
-    <script defer>// Initialize the CMS
-        if (window.CMS) {
-          window.CMS.init();
-        }
-    </script>
+    <!-- Load custom CMS configuration -->
+    <script src="/admin/cms.js"></script>
+  </head>
+  <body>
   </body>
 </html>
