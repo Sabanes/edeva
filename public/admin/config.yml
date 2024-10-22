@@ -5,7 +5,7 @@ backend:
 media_folder: "public/uploads"  # Folder where uploaded files will be stored
 public_folder: "/uploads"       # Folder accessible to the public
 
-collections:
+contents:
   - name: "about"
     label: "About Us"
     files:
