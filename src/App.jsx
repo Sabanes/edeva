@@ -8,10 +8,6 @@ import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
 import Hero from './sections/hero/Hero';
-import CMS from "decap-cms-app";
-// Initialize the CMS object
-CMS.init();
-// Now the registry is available via the CMS object.
 
 function App() {
 
