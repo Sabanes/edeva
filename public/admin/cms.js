@@ -1,4 +1,5 @@
-// Initialize the CMS
-if (window.CMS) {
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.CMS) {
     window.CMS.init();
   }
+});
