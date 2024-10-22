@@ -6,7 +6,7 @@
         "name": "Tecnica de dança classica",
         "category": "experience",
         "year": "2022",
-        "image": "public/assets/Images/project-1.png",
+        "image": "assets/Images/project-1.png",
         "link": "/contact"
       },
       {
@@ -14,7 +14,7 @@
         "name": "Contemporâneo",
         "category": "development",
         "year": "2023",
-        "image": "public/assets/Images/project-2.png",
+        "image": "assets/Images/project-2.png",
         "link": "/contact"
       },
       {
@@ -22,7 +22,7 @@
         "name": "Jazz",
         "category": "portfolio",
         "year": "2019",
-        "image": ".public/assets/Images/project-3.png",
+        "image": ".assets/Images/project-3.png",
         "link": "/contact"
       },
       {
@@ -30,7 +30,7 @@
         "name": "Hip-hop",
         "category": "experience",
         "year": "2021",
-        "image": "public/assets/Images/project-4.png",
+        "image": "assets/Images/project-4.png",
         "link": "/contact"
       },
       {
@@ -38,7 +38,7 @@
         "name": "Danças Tradicionais",
         "category": "experience",
         "year": "2021",
-        "image": "public/assets/Images/project-5.png",
+        "image": "assets/Images/project-5.png",
         "link": "/contact"
       },
       {
@@ -46,7 +46,7 @@
         "name": "Preparação física",
         "category": "development",
         "year": "2018",
-        "image": "public/assets/Images/project-6.png",
+        "image": "assets/Images/project-6.png",
         "link": "/contact"
       },
       {
@@ -54,7 +54,7 @@
         "name": "Teatro musical",
         "category": "development",
         "year": "2018",
-        "image": "public/assets/Images/project-7.png",
+        "image": "assets/Images/project-7.png",
         "link": "/contact"
       }
     ]

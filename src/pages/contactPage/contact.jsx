@@ -87,51 +87,49 @@ const Contact = () => {
   return (
     <ScrollToTop>
       <Menu />
-
-      <div className="h-svh w-full pb-10 flex flex-col items-center justify-center overflow-x-hidden bg-white">
-        <div className="flex flex-col items-center justify-center relative top-5">
-          <p className="purple uppercase border border-[#1b211e] rounded-full px-3">
+      <div className="h-svh w-full pb-10 flex flex-col items-center justify-center overflow-x-hidden bg-[var(--main)]">
+        <div className="flex flex-col items-center justify-center md:pb-0 relative top-5">
+          <p className="purple uppercase border border-white text-white rounded-full md:mb-20 px-3">
             {contactData.promo_text.content}
           </p> 
           <motion.h1
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}
             transition={{duration: 1}}
-            className="text-center md:text-[9vw] pb-10 pt-2 text-[15vw] uppercase leading-none text-[#1b211e]"
+            className="text-center md:text-[13vw] pb-10 pt-2 text-[16vw] uppercase leading-none text-white"
           >
-            <span>→</span>No need <br /> 
-            <span className="md:text-[9vw] text-[11vw] md:pr-7">TO BE SHY</span>
+            <span className="text-5xl">→</span>No need <br /> 
+            <span className="md:text-[13vw] text-[16vw] md:pr-7">TO BE SHY</span>
           </motion.h1>
 
-          <Button buttonText={contactData.button.cta} className="greeni boxi group relative md:px-10 px-8 md:py-2 py-1 overflow-hidden rounded-full bg-black md:text-lg shadow" />
+          <Button buttonText={contactData.button.cta} className="greeni boxi group relative md:px-10 px-8 md:py-2" />
           
-          <p className="text-center pt-10 md:max-w-[40%] max-w-[95%]">{contactData.description.content}</p>
         </div>
       </div>
 
-      <div className="flex md:flex-row flex-col md:justify-center py-10 md:text-left text-center items-center md:gap-[6rem] gap-10">
-        <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }} className="flex flex-col">
+      <div className="flex md:flex-row flex-col md:justify-center py-12 md:text-left text-center items-center md:gap-[6.7rem] gap-12">
+        <div className="flex flex-col">
           <h2 className="font-bold text-xl uppercase">{contactData.contact_info.contacts.title}</h2>
           <p className="text-md lighter">{contactData.contact_info.contacts.email}</p>
           <p className="text-md lighter">{contactData.contact_info.contacts.phone}</p>
-        </motion.div>
+        </div>
 
-        <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.5 }} className="flex flex-col">
+        <div className="flex flex-col">
           <h2 className="font-bold text-xl uppercase">{contactData.contact_info.social.title}</h2>
           <p className="text-md lighter underline"><a href={contactData.contact_info.social.instagram_url}>{contactData.contact_info.social.instagram} &#8599;</a></p>
           <p className="text-md lighter underline"><a href={contactData.contact_info.social.facebook_url}>{contactData.contact_info.social.facebook} &#8599;</a></p>
-        </motion.div>
+        </div>
 
-        <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 1 }} className="flex flex-col">
+        <div className="flex flex-col">
           <h2 className="font-bold text-xl uppercase">{contactData.contact_info.location.title}</h2>
           <p className="text-md lighter underline"><a href={contactData.contact_info.location.google_maps_url}>{contactData.contact_info.location.google_maps} &#8599;</a></p>
           <p className="text-md lighter underline"><a href={contactData.contact_info.location.apple_maps_url}>{contactData.contact_info.location.apple_maps} &#8599;</a></p>
-        </motion.div>
+        </div>
 
-        <motion.div initial={{ opacity: 0, x: -100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 1.5 }} className="flex flex-col">
+        <div className="flex flex-col">
           <h2 className="font-bold text-xl uppercase">{contactData.contact_info.company.title}</h2>
           <p className="text-md lighter underline"><a href={contactData.contact_info.company.company_url}>{contactData.contact_info.company.company_name} &#8599;</a></p>
-        </motion.div>
+        </div>
       </div>
 
       <div className="xl:mt-12 flex flex-col gap-10 mb-10 md:px-[6rem] px-3 overflow-hidden bg-[var(--main)] rounded-2xl w-[90%] mx-auto">
