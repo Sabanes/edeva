@@ -11,7 +11,7 @@ const About = () => {
     <div className="relative px-7 py-20 ">
       <div className="flex flex-col">
         <h1 className="md:text-8xl text-6xl">{data.title}</h1>
-        <p className="pb-3"> <TextGenerateEffect className="font-light md:max-w-[90%]" words={data.About_us_text} /></p>
+        <p className="pb-3"> <TextGenerateEffect className="font-light md:max-w-[85%]" words={data.About_us_text} /></p>
       </div>
       <span className="flex gap-3">
       <a className="" href="/contact">
@@ -25,6 +25,8 @@ const About = () => {
     
     </>
   );
+
+  
 };
 
 export default Transition(About);

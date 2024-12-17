@@ -12,6 +12,7 @@ import Feed from "./pages/News/feed";
 
 import App from "./App";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <Routes>

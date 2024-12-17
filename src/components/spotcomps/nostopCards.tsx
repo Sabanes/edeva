@@ -7,6 +7,7 @@ export function InfiniteMovingCardsDemo() {
   return (
     <>
     <div className="h-[30rem] w-full rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
+      <h1 className=" text-3xl font-regular  md:text-[3rem] text-[2.5rem] uppercase">Whats People think about us</h1>
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
@@ -16,7 +17,7 @@ export function InfiniteMovingCardsDemo() {
     </div>
             <section className="more-clients !bg-[white] py-10" data-scroll-section>
             <div className="more-clients-h1 bg-white">
-              <h1 className=" uppercase md:text-[3rem] text-[2.5rem]">We work with</h1>
+              <h1 className=" uppercase md:text-[3rem] text-[2.5rem] font-regular">We work with</h1>
             </div>
   
             <div className="flex md:flex-row flex-col w-[60%] m-auto bg-white">
@@ -40,31 +41,61 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "A escola de dança Eva Vieira de Almeida representa para a Mixiu um lugar de inspiração, crescimento e realização artística, onde a paixão pela dança se transforma em disciplina, amizade e expressão pessoa.",
+    name: "Mãe da Mixiu",
+    title: "Mãe da aluna",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+      "Para nós, pais, a Escola Eva Vieira de Almeida representa Disciplina, Amor e Responsabilidade. A Escola transmite valores de amizade, respeito e trabalho em equipa que para nós são muito importantes no crescimento da nossa filha.",
+    name: "Ana Sílvia Santos",
+    title: "Mãe da aluna",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    quote: "Nice atmosphere, strong discipline,  good community for kids, where they can find friends, train their bodies and sensation. Daniela 💗 one love 🙂",
+    name: "No Name!",
+    title: "Mãe da aluna",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "A Escola Eva Vieira representa para mim e para a minha filha Sofia um oportunidade para crescer e expressar através da dança a criatividade. ",
+    name: "Adélcia Monteiro",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+      "Uma escola, que é Casa. Uma escola que dá amor, cuida e educa para que os nossos filhos sejam boas pessoas.",
+    name: "Aua Dias",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+    "A Escola ensina a Dançar mas, mais do que isso, a Ser, a Olhar para o Outro e para o Mundo",
+    name: "Aua Dias",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+      "Uma escola, que é Casa. Uma escola que dá amor, cuida e educa para que os nossos filhos sejam boas pessoas.",
+    name: "Patricia Pacheco",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+      "We really appreciate the warmth and dedicated approach of the teachers, and the overall atmosphere of the school is wonderful.",
+    name: "Daria Ryndina",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+      "Para a Valentina, a escola de dança significa felicidade, liberdade, esforço e conquista. É um lugar onde a música entra no coração e faz o corpo contar uma história. 🩷",
+    name: "Cláudia Gigante de Figueiredo",
+    title: "Mãe da aluna",
+  },
+  {
+    quote:
+      "A Escola de Dança Edva é superação, onde cada passo é uma oportunidade de transformação e crescimento.",
+    name: "Andreia Leitão",
+    title: "Mãe da aluna",
   },
 ];

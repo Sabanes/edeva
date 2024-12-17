@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const Carousel = () => {
   return (
-    <section className=" w-[99.999%] m-auto bg-[var(--main)] rounded-b-2xl">
+    <section className=" w-[99.999%] m-auto bg-[var(--main)]">
               <div className="m-auto relative h-20" >
                   <h1 className="md:text-7xl text-5xl text-white relative md:top-20 top-40 pl-5">Danceplace</h1>
               </div>

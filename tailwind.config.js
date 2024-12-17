@@ -1,6 +1,4 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,8 +11,7 @@ export default {
       animation: {
         aurora: "aurora 60s linear infinite",
         shimmer: "shimmer 2s linear infinite",
-        scroll:
-        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         aurora: {
@@ -38,42 +35,43 @@ export default {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
-      }
+      },
+      screens: {
+        'xs': '150px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xlg': '1030px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
+      fontFamily: {
+        light: ['Satoshi-Light', 'sans-serif'],
+        lightItalic: ['Satoshi-LightItalic', 'sans-serif'],
+        regular: ['Satoshi-Regular', 'sans-serif'],
+        italic: ['Satoshi-Italic', 'sans-serif'],
+        medium: ['Satoshi-Medium', 'sans-serif'],
+        mediumItalic: ['Satoshi-MediumItalic', 'sans-serif'],
+        bold: ['Satoshi-Bold', 'sans-serif'],
+        boldItalic: ['Satoshi-BoldItalic', 'sans-serif'],
+        black: ['Satoshi-Black', 'sans-serif'],
+        blackItalic: ['Satoshi-BlackItalic', 'sans-serif'],
+        variable: ['Satoshi-Variable', 'sans-serif'],
+        variableItalic: ['Satoshi-VariableItalic', 'sans-serif'],
+      },
     },
-    screens: {
-      'xs': '150px',
-      // => @media (min-width: 250px) { ... }
-
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xlg': '1030px',
-      // => @media (min-width: 1033px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    }
   },
-  plugins: [addVariablesForColors],
-}
-
-
+  plugins: [
+    addVariablesForColors,
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
+};
 
 function addVariablesForColors({ addBase, theme }) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
   addBase({
     ":root": newVars,
   });

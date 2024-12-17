@@ -119,7 +119,7 @@ export const ImagesSlider = ({
   return (
     <div
       className={cn(
-        "overflow-hidden h-full w-full relative flex items-center justify-center",
+        "overflow-hidden mx-auto  h-[90svh] md:w-[95dvw] w-[90dvw] relative flex items-center justify-center",
         className
       )}
       style={{

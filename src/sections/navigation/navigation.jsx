@@ -66,12 +66,11 @@ const Menu = () => {
             duration: 1,
             delay: 2,
           }}
-      className="menu-bar m-auto">
-        <div className="menu-logo">
-          <Link className="bg-white rounded-full px-2 py-1" to="/">EDEVA</Link>
+      className="menu-bar max-w-[90vw] m-auto">
+        <div className="">
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button className="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border">
+        <button className="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-xs shadow border">
             <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span className="relative text-white group-hover:text-[var(--main)] uppercase ">Menu &#8599;</span>
           </button>
@@ -79,7 +78,7 @@ const Menu = () => {
       </motion.div>
 
       {/* menu-overlay */}
-      <div className="menu-overlay max-w-[1500px] m-auto">
+      <div className="menu-overlay  m-auto">
         {/* menu-overlay-bar */}
         <div className="menu-overlay-bar">
         <div className="menu-close ">

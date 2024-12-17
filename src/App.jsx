@@ -8,6 +8,9 @@ import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
 import Hero from './sections/hero/Hero';
+import { ExpandableCardDemo } from './components/ServicesList/serviesList';
+
+
 
 function App() {
 
@@ -18,7 +21,7 @@ function App() {
         <Hero />
         <About />
         <Carousel />
-        <NotDance />
+        <ExpandableCardDemo />
         <Team />
         <InfiniteMovingCardsDemo />
       <Footer />
