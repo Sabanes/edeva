@@ -28,18 +28,22 @@ export function ExpandableCardDemo() {
   useOutsideClick(ref, () => setActive(null));
 
   return (<>
+  <div className="w-screen flex justify-center items-center">
+  <h1 className=" text-center font-regular text-[9vw] md:text-[7vw] leading-none py-10 pt-20 ">Dance with us</h1>
+  </div>
     <AnimatePresence>
       {active && typeof active === "object" && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-white w-full z-10" />
+          className="fixed inset-0 backdrop-blur-lg w-full z-10" />
       )}
     </AnimatePresence>
     <AnimatePresence>
       {active && typeof active === "object" ? (
         <div className="fixed inset-0 grid place-items-center z-[100]">
+          
           <motion.button
             key={`button-${active.title}-${id}`}
             layout

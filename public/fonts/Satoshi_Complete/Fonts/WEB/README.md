@@ -2,42 +2,44 @@
 Follow these simple Steps.
 
 ## 1.
-Put `satoshi/` Folder into a Folder called `fonts/`.
+Put `general-sans/` Folder into a Folder called `fonts/`.
 
 ## 2.
-Put `satoshi.css` into your `css/` Folder.
+Put `general-sans.css` into your `css/` Folder.
 
 ## 3. (Optional)
-You may adapt the `url('path')` in `satoshi.css` depends on your Website Filesystem.
+You may adapt the `url('path')` in `general-sans.css` depends on your Website Filesystem.
 
 ## 4.
-Import `satoshi.css` at the top of you main Stylesheet.
+Import `general-sans.css` at the top of you main Stylesheet.
 
 ```
-@import url('satoshi.css');
+@import url('general-sans.css');
 ```
 
 ## 5.
 You are now ready to use the following Rules in your CSS to specify each Font Style:
 ```
-font-family: Satoshi-Light;
-font-family: Satoshi-LightItalic;
-font-family: Satoshi-Regular;
-font-family: Satoshi-Italic;
-font-family: Satoshi-Medium;
-font-family: Satoshi-MediumItalic;
-font-family: Satoshi-Bold;
-font-family: Satoshi-BoldItalic;
-font-family: Satoshi-Black;
-font-family: Satoshi-BlackItalic;
-font-family: Satoshi-Variable;
-font-family: Satoshi-VariableItalic;
+font-family: GeneralSans-Extralight;
+font-family: GeneralSans-ExtralightItalic;
+font-family: GeneralSans-Light;
+font-family: GeneralSans-LightItalic;
+font-family: GeneralSans-Regular;
+font-family: GeneralSans-Italic;
+font-family: GeneralSans-Medium;
+font-family: GeneralSans-MediumItalic;
+font-family: GeneralSans-Semibold;
+font-family: GeneralSans-SemiboldItalic;
+font-family: GeneralSans-Bold;
+font-family: GeneralSans-BoldItalic;
+font-family: GeneralSans-Variable;
+font-family: GeneralSans-VariableItalic;
 
 ```
 ## 6. (Optional)
 Use `font-variation-settings` rule to controll axes of variable fonts:
-wght 900.0
+wght 700.0
 
 Available axes:
-'wght' (range from 300.0 to 900.0
+'wght' (range from 200.0 to 700.0
 

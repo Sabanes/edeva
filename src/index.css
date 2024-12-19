@@ -4,7 +4,7 @@
 @import url("./pages/contactPage/index.module.css");
 @import url("./pages/Team/index.module.css");
 @import url("./pages/News/index.module.css");
-@import url("../public/fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css");
+@import url("../public/fonts/Satoshi_Complete/Fonts/WEB/css/general-sans.css");
 
 @tailwind base;
 @tailwind components;

@@ -34,7 +34,7 @@ export function ExpandableCardDemo() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-white w-full z-10" />
+          className="fixed inset-0 backdrop-blur-lg w-full z-10" />
       )}
     </AnimatePresence>
     <AnimatePresence>
@@ -124,7 +124,7 @@ export function ExpandableCardDemo() {
       ) : null}
     </AnimatePresence>
     <ul
-      className="max-w-3xl py-10 mx-auto w-[95%] grid grid-cols-2 md:grid-cols-3 items-start gap-4">
+      className="max-w-3xl py-10 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 items-start gap-10">
       {cards.map((card, index) => (
         <motion.div
           layoutId={`card-${card.title}-${id}`}
@@ -138,7 +138,7 @@ export function ExpandableCardDemo() {
                 height={100}
                 src={card.src}
                 alt={card.title}
-                className="h-60 w-full  rounded-lg object-cover object-top" />
+                className="h-72 w-full rounded-lg object-cover object-center" />
             </motion.div>
             <div className="flex justify-center items-center flex-col">
               <motion.h3
@@ -353,6 +353,24 @@ const cards = [
                     over two decades, Babu Maan has released numerous hit albums and
                     singles that have garnered him a massive fan following both in India
                     and abroad.
+                  </p>)
+      );
+    },
+  },
+  {
+    description: "Hugo Marmelada",
+    title: "Aap  Safeeuroor",
+    src: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/pjv0c9mmxwa0ciltlayi",
+    ctaText: "Visit",
+    ctaLink: "https://ui.aceternity.com/templates",
+    content: () => {
+      return (
+        (<p>Nasceu em Lisboa, em 1987. Formou-se na Academia de Dança Contemporânea de Setúbal. Trabalhou com a Compagnie Alias, Amanda Miller, André Mesquita, projecto Kamuyot de Ohad Naharin, Itamar Serussi, Jo Stromgren, Christopher Arouni, Companhia It Dansa dançando peças de Ohad Naharin, Jirí Kylián, Rafael Bonachela, Sidi Larbi Cherkaoui, Alexander Ekman e Catherine Allard, integrou a Companhia Carte Blanche dançando peças de Hooman Sharifi, Sharon Eyal, Crystal Pite, Sang Jijia, Ina Christel Johannessen, Marcos Morau, Siri Jontvedt, Snelle Hall, Lina Majdalanie, Mia Habib e Marcelo Evelin.
+          Em 2017 juntou-se à Batsheva Dance Company, dançando as peças “Venezuela”, “Last Work”, “Hora”, “Mamootot” e “The Hole” de Ohad Naharin e participou na criação de Marlene Monteiro Freitas, “Canine Jaunâtre 3”.
+          Desde o regresso a Portugal, em 2019, tem trabalhado com diferentes criadores como Ina Christel Johannessen, da Noruega, Pedro Ramos, Sofia Dias, Vítor Roriz, João Garcia Miguel, Francisco Camacho e Catarina Miranda. Paralelamente tem vindo a coreografar desde 2010, para o projecto “Kamuyot Creates” o dueto “I I” apresentado no Riksteatern, em Estocolmo, Suécia, “Stepping Over Stones” solo apresentado no 16th International Solo-Dance-Theatre Festival Stuttgart, Alemanha, vencendo os prémios de 2a Melhor Performance, Prémio do Público e convidado a uma digressão pela Alemanha e pelo Brasil, “Connect” e “Still, you can’t smile with me” apresentados no evento Batsheva Dancers Create e co- coreografou com Jens Trinidad “Flux” apresentado na Dansens Hus de Oslo e “As it is/ As it turns out” apresentado na Baerum Kulturhus, Noruega.
+          Desde o regresso a Portugal criou, em 2021, “Now I know, I really don’t know” apresentado na Mono Lisboa, “Podium” criado para a CAMADA - Centro Coreográfico, tendo estreia no Teatro Das Figuras, em 2023 em colaboração com o artista audiovisual Rudolfo Quintas "A Sombra das Ondas" e em 2024, criou a peça "Contido" a convite da Companhia de Dança de Almada.
+          Desde os 16 anos que leciona aulas de dança tendo já ensinado em muitos países, escolas de dança, universidades e companhias de dança tais como Carte Blanche (Noruega), It Dansa (Espanha), Academia de Dança de Jerusalém (Israel), Oslo National Academy of the Arts (Noruega), Proda-Professional Dance Trainning da Noruega, Scottish Dance Theater, Companhia Nacional de Bailado de Portugal, entre outros. 
+          Atualmente encontra-se a finalizar o 2ºano de Mestrado em Criação Coreográfica e Práticas Profissionais da Escola Superior de Dança e é um dos professores oficiais de Gaga. 
                   </p>)
       );
     },
