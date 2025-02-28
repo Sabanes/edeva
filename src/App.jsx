@@ -1,5 +1,5 @@
 'use client';
-import NotDance from './sections/Dance/Home'
+
 import Carousel from './sections/carousel/carousel';
 import Team from './sections/toolip/team';
 import About from './sections/about/about';
@@ -8,7 +8,7 @@ import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
 import Hero from './sections/hero/Hero';
-import { ExpandableCardDemo } from './components/ServicesList/serviesList';
+import DanceClasses from './components/ServicesList/serviesList';
 
 
 
@@ -21,7 +21,7 @@ function App() {
         <Hero />
         <About />
         <Carousel />
-        <ExpandableCardDemo />
+        <DanceClasses />
         <Team />
         <InfiniteMovingCardsDemo />
       <Footer />

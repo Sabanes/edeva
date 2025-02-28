@@ -5,7 +5,7 @@ import Button from '../../components/Button-main/Button';
 const Team = () => {
   return (
     <section
-      className="w-full m-auto h-[42rem] flex flex-col justify-center items-center"
+      className="w-full h-[42rem] flex flex-col justify-center items-center mx-auto !px-4 !sm:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-[1920px]"
       role="region"
       aria-labelledby="team-heading"
     >
@@ -14,8 +14,8 @@ const Team = () => {
         <h2 id="team-heading" className="font-thin text-lg mb-3">
           MEET OUR TEAM
         </h2>
-        <h1 className="font-regular text-[9vw] md:text-[7vw] leading-none mt-2">
-          THE BEST TEACHERS
+        <h1 className="font-regular text-[9vw] tracking-widest md:text-[7vw] leading-none">
+          THE BEST <br /> TEACHERS
         </h1>
       </header>
 

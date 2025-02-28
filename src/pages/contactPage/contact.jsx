@@ -1,190 +1,219 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
 import Transition from "../../components/transition/Transition";
 import Menu from "../../sections/navigation/navigation";
 import Footer from "../../sections/footer/footer";
 import ScrollToTop from "../../components/totop/Totop";
-import Button from "../../components/Button-main/Button";
-import contactData from "../../data/contact.json"; // Importing JSON data
-import "./index.module.css"; // Importing CSS file
+import contactData from "../../data/contact.json";
+import DOMPurify from 'dompurify';
+import "./index.module.css";
 
-// Register GSAP plugins at the top level, outside of any functions
-gsap.registerPlugin(ScrollTrigger);
+const EMAILJS_CONFIG = {
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  USER_ID: import.meta.env.VITE_EMAILJS_USER_ID
+};
+
+const INITIAL_FORM_STATE = { name: "", email: "", message: "" };
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [form, setForm] = useState(INITIAL_FORM_STATE);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+  const sanitizeInput = (value) => DOMPurify.sanitize(value, {
+    ALLOWED_TAGS: [],
+    ALLOWED_ATTR: []
+  });
 
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+    try {
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Eva Vieira De Almeida",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "sabatchkuaseli@gmail.com",
           message: form.message,
         },
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          alert("Ahh, something went wrong. Please try again.");
-        }
+        EMAILJS_CONFIG.USER_ID
       );
+
+      setForm(INITIAL_FORM_STATE);
+      alert("Thank you. I will get back to you as soon as possible.");
+    } catch (error) {
+      console.error("Sending failed:", error);
+      alert("Ahh, something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  // Register GSAP animations within the hook
-  useGSAP(() => {
-    gsap.to(".purple", { rotation: 360, duration: 2, ease: "bounce.in" });
-    gsap.to(".greeni", { 
-      rotation: 920,
-      duration: 1,
-      x: 0,
-      scrollTrigger: {
-        trigger: '.boxi',
-        scrub: true,
-      }
-    });
-  }, []);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: sanitizeInput(value) }));
+  };
+
+  const { 
+    promo_text, 
+    button, 
+    contact_info, 
+    form: formContent 
+  } = contactData;
 
   return (
     <ScrollToTop>
       <Menu />
+      
       <div className="h-svh w-full pb-10 flex flex-col items-center justify-center overflow-x-hidden bg-[var(--main)]">
-        <div className="flex flex-col items-center justify-center md:pb-0 relative top-5">
-          <p className="purple uppercase border border-white text-white rounded-full md:mb-20 px-3">
-            {contactData.promo_text.content}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex flex-col items-center justify-center md:pb-0 relative top-5"
+        >
+          <p className="uppercase border border-white text-white rounded-full md:mb-20 px-3 text-sm">
+            {promo_text.content}
           </p> 
-          <motion.h1
-            initial={{opacity: 0, y: 100}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 1}}
-            className="text-center md:text-[13vw] pb-10 pt-2 text-[16vw] uppercase leading-none text-white"
-          >
+
+          <h1 className="text-center md:text-[13vw] pb-10 pt-2 text-[16vw] uppercase leading-none text-white">
             <span className="text-5xl">→</span>No need <br /> 
             <span className="md:text-[13vw] text-[16vw] md:pr-7">TO BE SHY</span>
-          </motion.h1>
+          </h1>
 
-          <Button buttonText={contactData.button.cta} className="greeni boxi group relative md:px-10 px-8 md:py-2" />
-          
-        </div>
+          <button className="px-8 py-2 md:px-10 md:py-2 text-white border rounded-full hover:bg-white/10 transition-colors">
+            {button.cta}
+          </button>
+        </motion.div>
       </div>
 
       <div className="flex md:flex-row flex-col md:justify-center py-12 md:text-left text-center items-center md:gap-[6.7rem] gap-12">
-        <div className="flex flex-col">
-          <h2 className="font-bold text-xl uppercase">{contactData.contact_info.contacts.title}</h2>
-          <p className="text-md lighter">{contactData.contact_info.contacts.email}</p>
-          <p className="text-md lighter">{contactData.contact_info.contacts.phone}</p>
-        </div>
+        <ContactSection title={contact_info.contacts.title}>
+          <p className="text-md lighter">{contact_info.contacts.email}</p>
+          <p className="text-md lighter">{contact_info.contacts.phone}</p>
+        </ContactSection>
 
-        <div className="flex flex-col">
-          <h2 className="font-bold text-xl uppercase">{contactData.contact_info.social.title}</h2>
-          <p className="text-md lighter underline"><a href={contactData.contact_info.social.instagram_url}>{contactData.contact_info.social.instagram} &#8599;</a></p>
-          <p className="text-md lighter underline"><a href={contactData.contact_info.social.facebook_url}>{contactData.contact_info.social.facebook} &#8599;</a></p>
-        </div>
+        <ContactSection title={contact_info.social.title}>
+          <SocialLink href={contact_info.social.instagram_url} label={contact_info.social.instagram} />
+          <SocialLink href={contact_info.social.facebook_url} label={contact_info.social.facebook} />
+        </ContactSection>
 
-        <div className="flex flex-col">
-          <h2 className="font-bold text-xl uppercase">{contactData.contact_info.location.title}</h2>
-          <p className="text-md lighter underline"><a href={contactData.contact_info.location.google_maps_url}>{contactData.contact_info.location.google_maps} &#8599;</a></p>
-          <p className="text-md lighter underline"><a href={contactData.contact_info.location.apple_maps_url}>{contactData.contact_info.location.apple_maps} &#8599;</a></p>
-        </div>
+        <ContactSection title={contact_info.location.title}>
+          <SocialLink href={contact_info.location.google_maps_url} label={contact_info.location.google_maps} />
+          <SocialLink href={contact_info.location.apple_maps_url} label={contact_info.location.apple_maps} />
+        </ContactSection>
 
-        <div className="flex flex-col">
-          <h2 className="font-bold text-xl uppercase">{contactData.contact_info.company.title}</h2>
-          <p className="text-md lighter underline"><a href={contactData.contact_info.company.company_url}>{contactData.contact_info.company.company_name} &#8599;</a></p>
-        </div>
+        <ContactSection title={contact_info.company.title}>
+          <SocialLink href={contact_info.company.company_url} label={contact_info.company.company_name} />
+        </ContactSection>
       </div>
 
       <div className="xl:mt-12 flex flex-col gap-10 mb-10 md:px-[6rem] px-3 overflow-hidden bg-[var(--main)] rounded-2xl w-[90%] mx-auto">
-        <motion.div initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ type: "spring", stiffness: 100, duration: 1 }} className="flex-[0.75] pl-5 py-10 w-[90%]">
-          <h3 className="text-white md:text-[30px] sm:text-[20px] xs:text-[20px] text-[10px] tracking-wide light">{contactData.form.title}</h3>
-          <h3 className="text-white font-semibold md:text-[50px] sm:text-[40px] xs:text-[35px] text-[20px] tracking-wide">{contactData.form.subtitle}</h3>
+        <motion.div 
+          initial={{ opacity: 0, x: 100 }} 
+          whileInView={{ opacity: 1, x: 0 }}
+          className="flex-[0.75] pl-5 py-10 w-[90%]"
+        >
+          <div className="mb-8">
+            <h3 className="text-white md:text-[30px] text-[20px] tracking-wide light">
+              {formContent.title}
+            </h3>
+            <h3 className="text-white font-semibold md:text-[50px] text-[35px] tracking-wide">
+              {formContent.subtitle}
+            </h3>
+          </div>
 
-          <form ref={formRef} onSubmit={handleSubmit} className="mt-10 flex flex-col gap-8">
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">{contactData.form.name_label}</span>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder={contactData.form.name_placeholder}
-                className="py-4 px-6 placeholder:text-secondary text-white outline-none border-b border-b-white bg-transparent geist lighter rounded-none"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">{contactData.form.email_label}</span>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder={contactData.form.email_placeholder}
-                className="py-4 px-6 placeholder:text-secondary text-white outline-none border-b border-b-white bg-transparent geist lighter rounded-none"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="text-white font-medium mb-4">{contactData.form.message_label}</span>
-              <textarea
-                rows={7}
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder={contactData.form.message_placeholder}
-                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white outline-none border-b border-b-white bg-transparent geist lighter rounded-none"
-              />
-            </label>
+          <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-8">
+            <FormField
+              label={formContent.name_label}
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder={formContent.name_placeholder}
+            />
 
-            <button type="submit" className="bg-[#222] py-2 px-7 rounded-full outline-none w-fit text-[#e2e2e2] font-bold border border-[#c6c6c6]">
-              {loading ? contactData.form.loading_button : contactData.form.submit_button}
+            <FormField
+              label={formContent.email_label}
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder={formContent.email_placeholder}
+            />
+
+            <FormField
+              label={formContent.message_label}
+              name="message"
+              type="textarea"
+              value={form.message}
+              onChange={handleChange}
+              placeholder={formContent.message_placeholder}
+            />
+
+            <button 
+              type="submit" 
+              disabled={loading}
+              className="bg-[#222] py-2 px-7 rounded-full outline-none w-fit text-[#e2e2e2] font-bold border border-[#c6c6c6] hover:bg-[#333] transition-colors"
+            >
+              {loading ? formContent.loading_button : formContent.submit_button}
             </button>
           </form>
         </motion.div>
       </div>
 
-      <motion.span initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 100, duration: 1 }}>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+      >
         <Footer />
-      </motion.span>
+      </motion.div>
     </ScrollToTop>
   );
 };
 
-// Export the component at the top level
+// Reusable Components
+const ContactSection = ({ title, children }) => (
+  <div className="flex flex-col mx-4">
+    <h2 className="font-regular text-xl uppercase mb-2">{title}</h2>
+    <div className="flex flex-col gap-1">
+      {children}
+    </div>
+  </div>
+);
+
+const SocialLink = ({ href, label }) => (
+  <a 
+    href={href} 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-md font-thin underline"
+  >
+    {label} ↗
+  </a>
+);
+
+const FormField = ({ label, type = 'text', ...props }) => (
+  <label className="flex flex-col">
+    <span className="text-white font-medium mb-4">{label}</span>
+    {type === 'textarea' ? (
+      <textarea
+        {...props}
+        className="bg-transparent py-4 px-6 placeholder:text-secondary text-white outline-none border-b border-b-white rounded-none"
+        rows="7"
+      />
+    ) : (
+      <input
+        type={type}
+        {...props}
+        className="py-4 px-6 placeholder:text-secondary text-white outline-none border-b border-b-white bg-transparent rounded-none"
+      />
+    )}
+  </label>
+);
+
 export default Transition(Contact);

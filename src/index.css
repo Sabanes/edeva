@@ -4,11 +4,14 @@
 @import url("./pages/contactPage/index.module.css");
 @import url("./pages/Team/index.module.css");
 @import url("./pages/News/index.module.css");
-@import url("../public/fonts/Satoshi_Complete/Fonts/WEB/css/general-sans.css");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Clash Display', sans-serif;
+}
 
 /* Optional: Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
@@ -16,7 +19,8 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1b211e;
+    background: linear-gradient(135deg, #1b211e 0%, #232a27 100%);
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -39,11 +43,42 @@
 :root {
   --main: #1b211e;
   --text-light: rgb(255, 255, 255);
-  --text-dark: #153448;
 }
 
 
+.perspective-1000 {
+  perspective: 1000px;
+}
 
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+}
 
 
 html {
@@ -60,8 +95,6 @@ body {
   background-color: #fff !important;
   
 }
-
-
 
 .glass-effect {
   -webkit-backdrop-filter: blur(5.6px);
@@ -102,8 +135,6 @@ body {
     display: none;
   }
 }
-
-
 
 
 
@@ -222,4 +253,6 @@ body {
 .clip_path-container {
   clip-path: inset(30% 30% round 1rem);
 }
+
+
 

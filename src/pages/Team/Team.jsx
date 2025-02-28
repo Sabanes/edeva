@@ -14,7 +14,6 @@ const Contact = () => {
         <Menu />
         <HeroParallaxDemo />
         <ExpandableCardDemo />
-        
         <Footer />
       </ScrollToTop>
     </>

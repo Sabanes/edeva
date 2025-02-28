@@ -70,7 +70,7 @@ const Menu = () => {
         <div className="">
         </div>
         <div className="menu-open" onClick={toggleMenu}>
-        <button className="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full backdrop-blur-xl bg-[#1b211e]/60 md:text-md text-sm shadow border">
+        <button className="group relative md:left-0 left-5 px-3 py-1 overflow-hidden rounded-full backdrop-blur-xl bg-[#1b211e]/80 md:text-md text-sm shadow border">
             <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span className="relative text-white group-hover:text-[var(--main)] uppercase ">Menu &#8599;</span>
           </button>
@@ -83,7 +83,7 @@ const Menu = () => {
         <div className="menu-overlay-bar">
         <div className="menu-close ">
           </div>
-          <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-[var(--main)] md:text-md text-sm shadow border ">
+          <button class="group relative right-10 bottom-1 px-3 py-1 overflow-hidden rounded-full bg-gradient-to-br from-[#1b211e] to-[#232a27] md:text-md text-sm shadow border ">
             <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
             <span onClick={toggleMenu} class="relative text-white group-hover:text-[var(--main)] uppercase ">Close</span>
           </button>

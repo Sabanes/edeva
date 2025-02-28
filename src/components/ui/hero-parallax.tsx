@@ -8,7 +8,6 @@ import {
   MotionValue,
 } from "framer-motion";
 
-
 export const HeroParallax = ({
   products,
 }: {
@@ -53,10 +52,11 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
   return (
     <div
       ref={ref}
-      className="h-[370vh] bg-[var(--main)] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[350vh] bg-white py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -66,32 +66,33 @@ export const HeroParallax = ({
           translateY,
           opacity,
         }}
-        className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+
+        <motion.div className="flex flex-row mb-20 space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateXReverse}
-              key={product.title}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
+
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
               translate={translateX}
-              key={product.title}
+              key={product.thumbnail}
             />
           ))}
         </motion.div>
@@ -102,16 +103,25 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full flex justify-center flex-col  left-0 md:bottom-[9rem] bottom-[6rem]">
-      <h1 
-      className="text-5xl md:text-7xl text-center font-bold text-white">
+    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full flex justify-center flex-col left-0 md:bottom-[9rem] bottom-[6rem]">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+        className="text-5xl md:text-7xl font-regular text-center uppercase text-[var(--main)] drop-shadow-md"
+      >
         Meet Our <br /> Great Team
-      </h1>
-      <p className="max-w-2xl text-base text-center md:text-xl m-auto mt-8 text-white ">
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+        className="max-w-2xl text-center md:text-xl m-auto mt-8 text-[var(--main)] drop-shadow-sm"
+      >
         We build beautiful products with the latest technologies and frameworks.
         We are a team of passionate developers and designers that love to build
         amazing products.
-      </p>
+      </motion.p>
     </div>
   );
 };
@@ -135,27 +145,17 @@ export const ProductCard = ({
       whileHover={{
         y: -30,
       }}
-      key={product.title}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
-      <a
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
-        <img
+      <img
         loading="lazy"
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full rounded-2xl inset-0"
-          alt={product.title}
-        />
-      </a>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg- pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
+        src={product.thumbnail}
+        height="600"
+        width="600"
+        className="object-cover object-left-top absolute h-full w-full rounded-2xl inset-0"
+        alt=""
+      />
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 pointer-events-none"></div>
     </motion.div>
-    
   );
 };

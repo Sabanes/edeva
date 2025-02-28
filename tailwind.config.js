@@ -15,49 +15,40 @@ export default {
       },
       keyframes: {
         aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
-          },
+          from: { backgroundPosition: "50% 50%, 50% 50%" },
+          to:   { backgroundPosition: "350% 50%, 350% 50%" },
         },
         shimmer: {
-          from: {
-            "backgroundPosition": "0 0"
-          },
-          to: {
-            "backgroundPosition": "-200% 0"
-          }
+          from: { backgroundPosition: "0 0" },
+          to:   { backgroundPosition: "-200% 0" },
         },
         scroll: {
-          to: {
-            transform: "translate(calc(-50% - 0.5rem))",
-          },
+          to: { transform: "translate(calc(-50% - 0.5rem))" },
         },
       },
       screens: {
-        'xs': '150px',
-        'sm': '640px',
-        'md': '768px',
-        'lg': '1024px',
-        'xlg': '1030px',
-        'xl': '1280px',
+        xs: '150px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xlg: '1030px',
+        xl: '1280px',
         '2xl': '1536px',
       },
+      // Restore your custom Clash Display classes
       fontFamily: {
-        light: ['Satoshi-Light', 'sans-serif'],
-        lightItalic: ['Satoshi-LightItalic', 'sans-serif'],
-        regular: ['Satoshi-Regular', 'sans-serif'],
-        italic: ['Satoshi-Italic', 'sans-serif'],
-        medium: ['Satoshi-Medium', 'sans-serif'],
-        mediumItalic: ['Satoshi-MediumItalic', 'sans-serif'],
-        bold: ['Satoshi-Bold', 'sans-serif'],
-        boldItalic: ['Satoshi-BoldItalic', 'sans-serif'],
-        black: ['Satoshi-Black', 'sans-serif'],
-        blackItalic: ['Satoshi-BlackItalic', 'sans-serif'],
-        variable: ['Satoshi-Variable', 'sans-serif'],
-        variableItalic: ['Satoshi-VariableItalic', 'sans-serif'],
+        light: ['"Clash Display"', 'sans-serif'],
+        lightItalic: ['"Clash Display"', 'sans-serif'],
+        regular: ['"Clash Display"', 'sans-serif'],
+        italic: ['"Clash Display"', 'sans-serif'],
+        medium: ['"Clash Display"', 'sans-serif'],
+        mediumItalic: ['"Clash Display"', 'sans-serif'],
+        bold: ['"Clash Display"', 'sans-serif'],
+        boldItalic: ['"Clash Display"', 'sans-serif'],
+        black: ['"Clash Display"', 'sans-serif'],
+        blackItalic: ['"Clash Display"', 'sans-serif'],
+        variable: ['"Clash Display"', 'sans-serif'],
+        variableItalic: ['"Clash Display"', 'sans-serif'],
       },
     },
   },
@@ -68,11 +59,9 @@ export default {
 };
 
 function addVariablesForColors({ addBase, theme }) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
-  addBase({
-    ":root": newVars,
-  });
+  addBase({ ":root": newVars });
 }

@@ -4,7 +4,7 @@ import './index.module.css'; // Import your CSS file
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--main)] w-full">
+    <footer className="bg-gradient-to-br from-[#1b211e] to-[#232a27] w-full">
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           {footerData.navigation.map((navItem, index) => (
