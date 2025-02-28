@@ -5,7 +5,7 @@ import Button from "../../components/Button-main/Button";
 import data from "../../data/about.json";
 
 // Static content moved outside component
-const IMAGE_URL = "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/ebl6cx8rb4vqya8tzvet";
+const IMAGE_URL = "https://res.cloudinary.com/dcraqvlmb/image/upload/c_crop,g_center,h_0.80,w_1.00/ebl6cx8rb4vqya8tzvet";
 const SCHEMA_MARKUP = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -61,12 +61,12 @@ const About = () => {
             {/* Accessible button group */}
             <div className="flex gap-3 mt-6" role="group" aria-label="Action buttons">
               <Button 
-                href="/contact" 
+                link="/contact" 
                 buttonText={data.Reach_us_Button}
                 aria-label="Contact us for more information"
               />
               <Button
-                href="/contact"
+                link="https://drive.google.com/file/d/1hurDCZV4RT-XzaFyXWmXGPcKzIaqVBN0/view?usp=sharing"
                 buttonText={data.Schedule_Button}
                 aria-label="Schedule an appointment"
               />

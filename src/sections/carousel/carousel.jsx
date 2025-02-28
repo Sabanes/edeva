@@ -33,11 +33,11 @@ const CARDS = [
 const Carousel = () => {
   return (
     <section 
-      className="w-[99.999%] m-auto bg-gradient-to-br from-[#1b211e] to-[#232a27]"
+      className="w-[99.999%] mx-auto py-40 bg-gradient-to-br from-[#1b211e] to-[#232a27]"
       aria-label="Image carousel section"
     >
-      <div className="m-auto relative h-20 mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-[1920px]">
-        <h1 className="lg:text-8xl font-medium uppercase text-5xl text-white relative md:top-20 top-40 text-center">
+      <div className="m-auto relative mx-auto max-w-[1920px]">
+        <h1 className="lg:text-8xl font-medium uppercase text-5xl text-white relative text-center">
           Danceplace
         </h1>
       </div>

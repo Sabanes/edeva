@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Transition from "../../components/transition/Transition";
 import Menu from "../../sections/navigation/navigation";
+import Footer from "../../sections/footer/footer";
 
 
 const Feed = () => {
@@ -14,21 +15,23 @@ const Feed = () => {
     <span className="block text-sm md:text-sm text-[var(--main)] font-medium uppercase tracking-wider">
       Latest Updates
     </span>
-    <h3 className="text-5xl font-regular md:text-5xl text-[var(--main)] font-semibold leading-tight mt-2">
-      Discover Exciting Events on <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-transparent bg-clip-text">Instagram</span>
+    <h3 className="text-4xl font-regular md:text-5xl text-[var(--main)] font-semibold leading-tight mt-2">
+      Discover All Exciting Events on <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 text-transparent bg-clip-text">Instagram</span>
     </h3>
     <p className="text-base font-regular md:text-lg text-slate-700 my-4 md:my-6 max-w-lg">
       Every moment is an opportunity to connect. Explore our curated collection of upcoming events exclusively on our Instagram profile.
     </p>
-    <button
+    <a href="https://www.instagram.com/edevaoeiras/" target="_blank"><button
       className="group relative px-5 py-3 overflow-hidden rounded-full outline-none mt-2 md:text-md text-sm shadow bg-[#1b211e] font-medium transition-all duration-300 flex items-center justify-center">
       <div className="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
       <span className="relative text-white group-hover:text-[#1B1D1C] uppercase tracking-wider">Explore Now</span>
     </button>
+    </a>
+    
   </div>
   <ShuffleGrid />
 </section>
-
+  <Footer />
 
   </>
   );
@@ -125,7 +128,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 object-center grid-cols-3 grid-rows-3 h-[600px] gap-1">
+    <div className="grid object-center grid-cols-2 grid-rows-4 lg:grid-cols-3 lg:grid-rows-3 h-[600px] gap-1">
       {squares.map((sq) => sq)}
     </div>
   );

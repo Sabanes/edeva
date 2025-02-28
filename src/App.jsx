@@ -8,8 +8,7 @@ import { InfiniteMovingCardsDemo } from './components/spotcomps/nostopCards';
 import Footer from './sections/footer/footer';
 import ScrollToTop from './components/totop/Totop';
 import Hero from './sections/hero/Hero';
-import DanceClasses from './components/ServicesList/serviesList';
-
+import DanceSchoolSections from './components/ServicesList/serviesList';
 
 
 function App() {
@@ -21,7 +20,7 @@ function App() {
         <Hero />
         <About />
         <Carousel />
-        <DanceClasses />
+        <DanceSchoolSections/>
         <Team />
         <InfiniteMovingCardsDemo />
       <Footer />

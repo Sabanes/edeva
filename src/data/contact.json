@@ -2,11 +2,11 @@
     "form": {
       "title": "Questions?",
       "subtitle": "ASK HERE...",
-      "name_label": "Your Name 😁",
+      "name_label": "Your Name",
       "name_placeholder": "What's your name?",
-      "email_label": "Your Best Email 📧",
+      "email_label": "Your Best Email",
       "email_placeholder": "What's your e-mail address?",
-      "message_label": "Your question 💬",
+      "message_label": "Your question",
       "message_placeholder": "What do you want to ask?",
       "submit_button": "Send",
       "loading_button": "Sending..."

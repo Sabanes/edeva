@@ -8,7 +8,7 @@ const teachers = [
     name: "Eva Vieira de Almeida",
     role: "Founder & Teacher",
     image:
-      "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/c_crop,g_face,h_0.94,w_1.00/Eva/u9omodk62kxrsk0fdmfp",
     bio: "Born in Lisbon in 1980, she trained in classical ballet at the Royal Academy of Dancing before joining The Urdang Academy in Covent Garden. She appeared in major Portuguese TV shows and has been a choreographer and judge for Angola’s Bounce since 2009. Her work spans theater, advertising, and international productions, including Carmen in Moldova and Football for Friendship at the 2016 Champions League final. As a teacher, she has trained award-winning students and is now the director of the Eva Vieira de Almeida Dance School.",
     socialLinks: [
       { platform: "instagram", url: "#" },

@@ -77,7 +77,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center justify-center md:pb-0 relative top-5"
         >
-          <p className="uppercase border border-white text-white rounded-full md:mb-20 px-3 text-sm">
+          <p className="uppercase border border-white text-white rounded-full md:mb-20 px-5 py-2 text-sm">
             {promo_text.content}
           </p> 
 
@@ -94,8 +94,8 @@ const Contact = () => {
 
       <div className="flex md:flex-row flex-col md:justify-center py-12 md:text-left text-center items-center md:gap-[6.7rem] gap-12">
         <ContactSection title={contact_info.contacts.title}>
-          <p className="text-md lighter">{contact_info.contacts.email}</p>
-          <p className="text-md lighter">{contact_info.contacts.phone}</p>
+        <a href={`mailto:${contact_info.contacts.email}`} className="text-md underline lighter">{contact_info.contacts.email}</a>
+        <a href={`tel:${contact_info.contacts.phone}`} className="text-md underline lighter">{contact_info.contacts.phone}</a>
         </ContactSection>
 
         <ContactSection title={contact_info.social.title}>
@@ -108,9 +108,9 @@ const Contact = () => {
           <SocialLink href={contact_info.location.apple_maps_url} label={contact_info.location.apple_maps} />
         </ContactSection>
 
-        <ContactSection title={contact_info.company.title}>
+        {/* <ContactSection title={contact_info.company.title}>
           <SocialLink href={contact_info.company.company_url} label={contact_info.company.company_name} />
-        </ContactSection>
+        </ContactSection> */}
       </div>
 
       <div className="xl:mt-12 flex flex-col gap-10 mb-10 md:px-[6rem] px-3 overflow-hidden bg-[var(--main)] rounded-2xl w-[90%] mx-auto">
@@ -193,7 +193,7 @@ const SocialLink = ({ href, label }) => (
     rel="noopener noreferrer"
     className="text-md font-thin underline"
   >
-    {label} ↗
+    {label}
   </a>
 );
 
