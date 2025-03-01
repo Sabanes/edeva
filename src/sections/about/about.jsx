@@ -60,9 +60,8 @@ const About = () => {
 
             {/* Accessible button group */}
             <div className="flex gap-3 mt-6" role="group" aria-label="Action buttons">
-              <a href="/contact">iji</a>
               <Button 
-                link="" 
+                link="/contact" 
                 buttonText={data.Reach_us_Button}
                 aria-label="Contact us for more information"
               />
