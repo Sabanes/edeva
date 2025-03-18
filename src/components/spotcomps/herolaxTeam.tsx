@@ -10,7 +10,7 @@ export const products = [
     title: "Moonbeam",
     link: "/team",
     thumbnail:
-      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/d7xnt7goufn9ss8ikgpo",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/uqfoznwbeedufgzw9mbs",
   },
   {
     title: "Cursor",
@@ -29,7 +29,7 @@ export const products = [
     title: "Editorially",
     link: "https://editorially.org",
     thumbnail:
-      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/gr5nk2nqimajjrcvep9l",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/uqfoznwbeedufgzw9mbs",
   },
   {
     title: "Editrix AI",
@@ -41,7 +41,7 @@ export const products = [
     title: "Pixel Perfect",
     link: "https://app.pixelperfect.quest",
     thumbnail:
-      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/a573prqzbianktadmrx1",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/jqiqevnfuckf2ksnbq2g",
   },
 
   {
@@ -60,7 +60,7 @@ export const products = [
     title: "Tailwind Master Kit",
     link: "https://tailwindmasterkit.com",
     thumbnail:
-      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/a573prqzbianktadmrx1",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/jqiqevnfuckf2ksnbq2g",
   },
   {
     title: "SmartBridge",
@@ -97,6 +97,6 @@ export const products = [
     title: "E Free Invoice",
     link: "https://efreeinvoice.com",
     thumbnail:
-      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/d7xnt7goufn9ss8ikgpo",
+      "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/je4bfzbwkbnfnrsnwzaw",
   },
 ];

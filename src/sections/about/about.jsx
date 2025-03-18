@@ -32,7 +32,7 @@ const About = () => {
           {/* Content container with semantic markup */}
           <div className="flex flex-col lg:w-1/2" itemScope itemProp="mainContent">
             <h1 
-              className="lg:text-8xl font-medium uppercase text-5xl text-center"
+              className="lg:text-8xl font-thin uppercase text-5xl text-center"
               itemProp="headline"
             >
               {data.title}

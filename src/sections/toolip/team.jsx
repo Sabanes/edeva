@@ -11,17 +11,16 @@ const Team = () => {
     >
       {/* Header */}
       <header className="text-center text-white">
-        <h2 id="team-heading" className="font-thin text-lg mb-3">
-          MEET OUR TEAM
-        </h2>
-        <h1 className="font-medium text-5xl lg:text-7xl  tracking-widest leading-none">
-          THE BEST <br /> TEACHERS
-        </h1>
+ 
+ 
+        <h1 id="team-heading" className="font-thin text-5xl lg:text-7xl  tracking-widest leading-none">
+        MEET OUR TEAM      
+          </h1>
       </header>
 
       {/* Description */}
       <p className="md:max-w-[50%] text-white max-w-[80%] md:text-lg mt-4 text-center font-regular">
-      Our talented and passionate dance instructors bring years of experience, energy, and dedication to every class. Whether you’re a beginner or an advanced dancer, our team is here to guide, inspire, and help you master every move with confidence.
+      Our talented and passionate dance teachers bring years of experience, energy, and dedication to every class. Whether you’re a beginner or an advanced dancer, our team is here to guide, inspire, and help you master every move with confidence.
       </p>
 
       {/* Tooltip Preview */}
@@ -31,7 +30,7 @@ const Team = () => {
 
       {/* Call-to-Action Button */}
       <div role="contentinfo" className="">
-        <Button link="/team" buttonText="Meet Our Team →" />
+        <Button link="/team" buttonText="Learn more →" />
       </div>
     </section>
   );

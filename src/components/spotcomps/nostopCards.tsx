@@ -17,7 +17,7 @@ export function InfiniteMovingCardsDemo() {
     </section>
     <section className="partners-section bg-white py-16 mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-20 max-w-[1920px]" data-scroll-section>
       <div className="text-center mb-16">
-        <h2 className="uppercase text-5xl md:text-7xl font-medium tracking-wider">We work with</h2>
+        <h2 className="uppercase text-5xl md:text-7xl font-thin tracking-wider">We work with</h2>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 max-w-6xl mx-auto">

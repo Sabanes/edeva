@@ -37,8 +37,8 @@ const Carousel = () => {
       aria-label="Image carousel section"
     >
       <div className="m-auto relative mx-auto max-w-[1920px]">
-        <h1 className="lg:text-8xl font-medium uppercase text-5xl text-white relative text-center">
-          Danceplace
+        <h1 className="lg:text-8xl font-light uppercase text-5xl text-white relative text-center">
+          Our Premises
         </h1>
       </div>
       

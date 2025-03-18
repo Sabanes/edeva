@@ -77,18 +77,15 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center justify-center md:pb-0 relative top-5"
         >
-          <p className="uppercase border border-white text-white rounded-full md:mb-20 px-5 py-2 text-sm">
-            {promo_text.content}
-          </p> 
-
           <h1 className="text-center md:text-[13vw] pb-10 pt-2 text-[16vw] uppercase leading-none text-white">
             <span className="text-5xl">→</span>No need <br /> 
             <span className="md:text-[13vw] text-[16vw] md:pr-7">TO BE SHY</span>
           </h1>
-
+          <a href=" ">
           <button className="px-8 py-2 md:px-10 md:py-2 text-white border rounded-full hover:bg-white/10 transition-colors">
-            {button.cta}
+          {promo_text.content}
           </button>
+          </a>
         </motion.div>
       </div>
 
@@ -166,12 +163,9 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-      >
+
         <Footer />
-      </motion.div>
+
     </ScrollToTop>
   );
 };

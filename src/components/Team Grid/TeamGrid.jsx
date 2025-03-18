@@ -6,7 +6,7 @@ export function ExpandableCardDemo() {
   return (
     <div className="py-16 bg-[#1b211e]">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl md:text-8xl font-thin uppercase text-center mb-12 text-white">
           Our Teachers
         </h2>
         
@@ -29,7 +29,7 @@ const FlipCard = ({ teacher }) => {
 
   return (
     <div 
-      className="h-96 w-full perspective-1000 cursor-pointer" 
+      className="h-[25.5rem] w-full perspective-1000 cursor-pointer" 
       onClick={handleFlip}
       onKeyDown={(e) => e.key === 'Enter' && handleFlip()}
       tabIndex={0}
@@ -97,12 +97,8 @@ const teachers = [
     id: 1,
     name: "Eva Vieira de Almeida",
     role: "Founder & Teacher",
-    image: "https://res.cloudinary.com/dcraqvlmb/image/upload/c_crop,g_face,h_0.94,w_1.00/Eva/u9omodk62kxrsk0fdmfp",
+    image: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/kdomo1dx5r58ycqak5up",
     bio: "Born in Lisbon in 1980, she trained in classical ballet at the Royal Academy of Dancing before joining The Urdang Academy in Covent Garden. She appeared in major Portuguese TV shows and has been a choreographer and judge for Angola’s Bounce since 2009. Her work spans theater, advertising, and international productions, including Carmen in Moldova and Football for Friendship at the 2016 Champions League final. As a teacher, she has trained award-winning students and is now the director of the Eva Vieira de Almeida Dance School.",
-    socialLinks: [
-      { platform: "instagram", url: "#" },
-      { platform: "linkedin", url: "#" }
-    ]
   },
   {
     id: 2,
@@ -110,9 +106,6 @@ const teachers = [
     role: "Teacher",
     image: "https://res.cloudinary.com/dcraqvlmb/image/upload/c_crop,g_south,h_0.70,w_1.00/q_auto:eco/Eva/f2viv2ylwrqjp3n2bmlc",
     bio: "In Brazil, she spent 30 years as Artistic and Pedagogical Coordinator at the Alice Arja Dance School and restager for Cia de Ballet do RJ, with many students joining top companies in the U.S. and Europe. She also assisted in Miami City Ballet School’s South American program auditions. Now in Portugal, she teaches classical dance at the Eva Vieira de Almeida Dance School, with students excelling in national and international competitions.",
-    socialLinks: [
-      { platform: "instagram", url: "#" }
-    ]
   },
   {
     id: 3,
@@ -120,10 +113,6 @@ const teachers = [
     role: "Ballet Instructor",
     image: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/v1/Eva/tr5xsmdd2rq6ccwi1cib",
     bio: "Com uma carreira consolidada na dança, Filipe Narciso formou-se na Escola de Dança do Conservatório Nacional e integrou companhias prestigiadas, como a Companhia Nacional de Bailado e o Quorum Ballet. Ao longo dos anos, trabalhou com coreógrafos de renome e participou em produções de destaque, incluindo O Lago dos Cisnes e Giselle. Atualmente, dedica-se ao ensino e à coreografia, tendo orientado alunos em instituições de referência e conquistado prémios em competições internacionais.",
-    socialLinks: [
-      { platform: "instagram", url: "#" },
-      { platform: "twitter", url: "#" }
-    ]
   },
   {
     id: 4,
@@ -145,5 +134,21 @@ const teachers = [
     role: "Classical Ballet Instructor",
     image: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/tj4s6bakcugfkntglugx",
     bio: "Laura Petitjean began her classical dance training through the methods of the Royal Academy of Dance and Vaganova, supplementing it with studies in Contemporary Dance. Throughout her career, she has participated in various international festivals and courses, including at the Pôle National Supérieur de Danse – Rosella Hightower in France. She graduated in Dance from the Escola Superior de Dança in 2020, where she worked with renowned choreographers and teachers such as Cristina Graça, Victor Hugo Pontes, Barbara Griggi, and Sylvia Rijmer.",
+  },
+  {
+    id: 7,
+    name: "Hugo Marmelada",
+    role: "Teacher",
+    image: "https://res.cloudinary.com/dcraqvlmb/image/upload/f_auto,q_auto/pjv0c9mmxwa0ciltlayi",
+    bio: "Born in Lisbon in 1987, Hugo Marmelada studied at the Academia de Dança Contemporânea de Setúbal. He has performed with Batsheva Dance Company and Carte Blanche, collaborating with choreographers like Ohad Naharin, Jirí Kylián, Sidi Larbi Cherkaoui, and Crystal Pite. After returning to Portugal in 2019, he worked with various artists and developed his own internationally presented choreographic projects. In addition to extensive teaching experience worldwide, he is an official Gaga teacher. Currently, he is completing a Master’s in Choreographic Creation at Escola Superior de Dança.",
   }
 ];
+
+
+/* Hugo Marmelada
+Nasceu em Lisboa, em 1987. Formou-se na Academia de Dança Contemporânea de Setúbal. Trabalhou com a Compagnie Alias, Amanda Miller, André Mesquita, projecto Kamuyot de Ohad Naharin, Itamar Serussi, Jo Stromgren, Christopher Arouni, Companhia It Dansa dançando peças de Ohad Naharin, Jirí Kylián, Rafael Bonachela, Sidi Larbi Cherkaoui, Alexander Ekman e Catherine Allard, integrou a Companhia Carte Blanche dançando peças de Hooman Sharifi, Sharon Eyal, Crystal Pite, Sang Jijia, Ina Christel Johannessen, Marcos Morau, Siri Jontvedt, Snelle Hall, Lina Majdalanie, Mia Habib e Marcelo Evelin.
+Em 2017 juntou-se à Batsheva Dance Company, dançando as peças “Venezuela”, “Last Work”, “Hora”, “Mamootot” e “The Hole” de Ohad Naharin e participou na criação de Marlene Monteiro Freitas, “Canine Jaunâtre 3”.
+Desde o regresso a Portugal, em 2019, tem trabalhado com diferentes criadores como Ina Christel Johannessen, da Noruega, Pedro Ramos, Sofia Dias, Vítor Roriz, João Garcia Miguel, Francisco Camacho e Catarina Miranda. Paralelamente tem vindo a coreografar desde 2010, para o projecto “Kamuyot Creates” o dueto “I I” apresentado no Riksteatern, em Estocolmo, Suécia, “Stepping Over Stones” solo apresentado no 16th International Solo-Dance-Theatre Festival Stuttgart, Alemanha, vencendo os prémios de 2a Melhor Performance, Prémio do Público e convidado a uma digressão pela Alemanha e pelo Brasil, “Connect” e “Still, you can’t smile with me” apresentados no evento Batsheva Dancers Create e co- coreografou com Jens Trinidad “Flux” apresentado na Dansens Hus de Oslo e “As it is/ As it turns out” apresentado na Baerum Kulturhus, Noruega.
+Desde o regresso a Portugal criou, em 2021, “Now I know, I really don’t know” apresentado na Mono Lisboa, “Podium” criado para a CAMADA - Centro Coreográfico, tendo estreia no Teatro Das Figuras, em 2023 em colaboração com o artista audiovisual Rudolfo Quintas "A Sombra das Ondas" e em 2024, criou a peça "Contido" a convite da Companhia de Dança de Almada.
+Desde os 16 anos que leciona aulas de dança tendo já ensinado em muitos países, escolas de dança, universidades e companhias de dança tais como Carte Blanche (Noruega), It Dansa (Espanha), Academia de Dança de Jerusalém (Israel), Oslo National Academy of the Arts (Noruega), Proda-Professional Dance Trainning da Noruega, Scottish Dance Theater, Companhia Nacional de Bailado de Portugal, entre outros.  */
+/* Atualmente encontra-se a finalizar o 2ºano de Mestrado em Criação Coreográfica e Práticas Profissionais da Escola Superior de Dança e é um dos professores oficiais de Gaga.  */

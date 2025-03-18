@@ -93,7 +93,7 @@ const AnimatedButton = () => {
           boxShadow: "0px 0px 20px 5px rgba(255,255,255,0.3)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 10 }}
-        className="md:px-10 md:py-4 px-5 py-2 md:relative bottom-8 text-white backdrop-blur-lg border-[1px] rounded-full hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] text-sm transition duration-200"
+        className="md:px-10 md:py-4 px-5 py-2 text-xs md:relative text-white backdrop-blur-lg border-[1px] rounded-full hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] transition duration-200"
         aria-label="Upcoming events"
       >
         {data.Upcoming_events_Button}
@@ -129,14 +129,14 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
-          className="z-10 w-[100dvw] absolute centeredTwo text-white md:text-[8vw] text-5xl font-medium tracking-wide text-center"
+          className="z-10 w-[100dvw] absolute centeredTwo text-white md:text-[8vw] text-3xl font-medium tracking-wide text-center"
         >
+
+          <AnimatedText text={data.title_2_part} className="md:py-20 font-thin" />
           <AnimatedText
             text={data.title_1_part}
-            className="md:text-[4vw] font-light sm:text-4xl text-3xl uppercase"
+            className="md:text-[4vw] font-thin sm:text-4xl pb-3 text-2xl uppercase"
           />
-          <AnimatedText text={data.title_2_part} className="mt-3" />
-          <AnimatedText text={data.title_3_part} />
           <AnimatedButton />
         </motion.h1>
       </section>
